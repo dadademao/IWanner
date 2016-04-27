@@ -11,6 +11,12 @@
 //#import "EaseMob.h"
 /******************环信头文件******************/
 
+#import "IWBaseViewController.h"
+
+#import "MJExtension.h"
+#import "SDImageCache.h"
+#import "SVProgressHUD.h"
+
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+Extension.h"
 

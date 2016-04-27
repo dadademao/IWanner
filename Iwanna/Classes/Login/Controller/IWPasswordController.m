@@ -22,7 +22,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = YKBackColor;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick:)];;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
@@ -41,11 +40,6 @@
     passwordAgain.textField.secureTextEntry = YES;
     [self.view addSubview:passwordAgain];
 
-}
-
-
-- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)rightBarButtonItemClick:(UIBarButtonItem *)item{
