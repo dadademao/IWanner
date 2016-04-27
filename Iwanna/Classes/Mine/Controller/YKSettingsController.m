@@ -45,6 +45,7 @@
     self.view.backgroundColor = YKBackColor;
     // 取消tableView的垂直滚动
     self.tableView.showsVerticalScrollIndicator = NO;
+//    self.tableView.scrollEnabled = NO;
 }
 
 // 设置分割分模式(左边间距为0)

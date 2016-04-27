@@ -22,14 +22,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = YKBackColor;
     
-<<<<<<< HEAD
-=======
     UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     negativeSpacer.width = -12;
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,leftItem];    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage
                                                                        imageNamed:@"iwanna-icon_small"]];
->>>>>>> kingwang
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18]} forState:UIControlStateNormal];
     
@@ -51,6 +48,11 @@
     passwordAgain.textField.secureTextEntry = YES;
     [self.view addSubview:passwordAgain];
 
+}
+
+
+- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)rightBarButtonItemClick:(UIBarButtonItem *)item{

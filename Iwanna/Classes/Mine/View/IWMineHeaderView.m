@@ -33,7 +33,7 @@
         
         YKCircularImageView *headerImage = [[YKCircularImageView alloc] init];
         self.headerImage = headerImage;
-        headerImage.image = [UIImage imageNamed:@"mine_defaultHeader"];
+        headerImage.image = [UIImage imageNamed:@"lufei.jpg"];
         [self addSubview:headerImage];
         
         // 轻触手势(点按)

@@ -16,7 +16,6 @@
 @implementation IWMineController
 
 - (void)viewDidLoad{
-    
     [super viewDidLoad];
     
     // 改变状态栏的背景颜色
@@ -39,6 +38,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 
 
 @end

@@ -8,8 +8,6 @@
 
 #import "WMDatepicker_DateModel.h"
 
-
-
 @implementation WMDatepicker_DateModel
 - (id)initWithDate:(NSDate *)date
 {

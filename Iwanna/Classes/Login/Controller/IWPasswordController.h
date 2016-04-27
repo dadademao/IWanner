@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IWPasswordController : IWBaseViewController
+@interface IWPasswordController : UIViewController
 
 @end

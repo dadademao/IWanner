@@ -8,7 +8,6 @@
 
 #import "IWTabBarController.h"
 #import "IWNavigationController.h"
-#import "IWFoundViewController.h"
 #import "IWMessageController.h"
 #import "IWMineController.h"
 
@@ -20,24 +19,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    IWFoundViewController *foundVC = [[IWFoundViewController alloc] init];
-    foundVC.view.backgroundColor = [UIColor whiteColor];
-    [self addChildViewController:foundVC imageName:@"tabBar_discover" title:@"发现"];
+    
+    UIViewController *oneVC = [[UIViewController alloc] init];
+    oneVC.view.backgroundColor = [UIColor whiteColor];
+    [self addChildViewController:oneVC imageName:@"tempImage" title:@"发现"];
     
     IWMessageController *messageVC = [[IWMessageController alloc] init];
-    [self addChildViewController:messageVC imageName:@"tabBar_message" title:@"消息"];
+    [self addChildViewController:messageVC imageName:@"tempImage" title:@"消息"];
     
     IWMineController *mineVC = [[IWMineController alloc] init];
     mineVC.plistName = @"IWMine";
-    [self addChildViewController:mineVC imageName:@"tabBar_mine" title:@"我的"];
+    [self addChildViewController:mineVC imageName:@"tempImage" title:@"我的"];
     
 }
 
 - (void)addChildViewController:(UIViewController *)childController imageName:(NSString *)imageName title:(NSString *)title{
     
     // 设置默认状态下tabBarItem图片,并且却掉系统对图片的渲染方法
-    childController.tabBarItem.image = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    childController.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     // 设置选中状态下tabBarItem图片,并且却掉系统对图片的渲染方法
     childController.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     // 设置文字
