@@ -90,7 +90,11 @@
 		B1CEB7D71C6C329300521AC0 /* IWLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB7D61C6C329300521AC0 /* IWLoginTextField.m */; };
 		B1CEB7DA1C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB7D91C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m */; };
 		B1CEB85A1C6C69E500521AC0 /* IWForgetPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */; };
+<<<<<<< HEAD
 		F7BC12D91CD0A94B002657C2 /* NetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC12D61CD0A94B002657C2 /* NetWorkHelper.m */; };
+=======
+		C98B5F201CD0C37300870FA3 /* IWOldUserLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */; };
+>>>>>>> kingwang
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -261,8 +265,12 @@
 		B1CEB7D91C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RemoveHighlightEffect.m"; sourceTree = "<group>"; };
 		B1CEB8581C6C69E500521AC0 /* IWForgetPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWForgetPasswordView.h; sourceTree = "<group>"; };
 		B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWForgetPasswordView.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		F7BC12D51CD0A94B002657C2 /* NetWorkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkHelper.h; sourceTree = "<group>"; };
 		F7BC12D61CD0A94B002657C2 /* NetWorkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkHelper.m; sourceTree = "<group>"; };
+=======
+		C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IWOldUserLoginController.xib; sourceTree = "<group>"; };
+>>>>>>> kingwang
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +435,7 @@
 				186615621C2EEB17007B7450 /* IWLoginController.m */,
 				B1CEB7D21C6B55AD00521AC0 /* IWOldUserLoginController.h */,
 				B1CEB7D31C6B55AD00521AC0 /* IWOldUserLoginController.m */,
+				C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */,
 				186615641C2EEBB6007B7450 /* IWRegisterController.h */,
 				186615651C2EEBB6007B7450 /* IWRegisterController.m */,
 				1866156A1C2F9505007B7450 /* IWPasswordController.h */,
@@ -897,6 +906,7 @@
 				1866152A1C2ED83F007B7450 /* LaunchScreen.storyboard in Resources */,
 				186615271C2ED83F007B7450 /* Assets.xcassets in Resources */,
 				18C4584E1C37B83C005B6059 /* IWHobbySource.plist in Resources */,
+				C98B5F201CD0C37300870FA3 /* IWOldUserLoginController.xib in Resources */,
 				186615251C2ED83F007B7450 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,13 @@
         
         UIButton *nameButton = [[UIButton alloc] initWithFrame:self.bounds];
         self.nameButton = nameButton;
-        [nameButton setTitleColor:YKSubColor forState:UIControlStateNormal];
-        nameButton.backgroundColor = RandomColor;
+        [nameButton setTitleColor:UIColorFromHex(0xa5a7bd) forState:UIControlStateNormal];
+        nameButton.backgroundColor = [UIColor clearColor];
         nameButton.layer.cornerRadius = nameButton.height * 0.5;
+        nameButton.layer.borderWidth = 2;
+        nameButton.titleLabel.font = SYS_FONT(16);
+        
+        
         [self addSubview:nameButton];
         
     }

@@ -35,9 +35,9 @@
     // 设置每个格子之间的最小间距
     flowLayout.minimumInteritemSpacing = 5;
     // 设置每行之间的最小行间距
-    flowLayout.minimumLineSpacing = 10;
+    flowLayout.minimumLineSpacing = 15;
     // 设置每组之间的内边距
-    flowLayout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
+    flowLayout.sectionInset = UIEdgeInsetsMake(35, 20, 20, 20);
     return [super initWithCollectionViewLayout:flowLayout];
 }
 
@@ -46,8 +46,14 @@
     
     self.collectionView.backgroundColor = YKBackColor;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick:)];;
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpacer.width = -12;
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,leftItem];
+    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage
+                                                                       imageNamed:@"iwanna-icon_small"]];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18]} forState:UIControlStateNormal];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
@@ -80,7 +86,8 @@
     nameLabel.x = 20;
     nameLabel.centerY = reusableview.height * 0.5;
     nameLabel.text = self.hobbys[indexPath.section][@"headerView"];
-    nameLabel.font = SYS_FONT(20);
+    nameLabel.font = SYS_FONT(36);
+    
     [nameLabel sizeToFit];
     [reusableview addSubview:nameLabel];
     return reusableview;
@@ -106,9 +113,19 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    
     IWHobbyCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
     NSArray *tempArray = self.hobbys[indexPath.section][@"title"];
     [cell.nameButton setTitle:tempArray[indexPath.row] forState:UIControlStateNormal];
+    if (indexPath.section == 0) {
+        cell.nameButton.layer.borderColor = UIColorFromHex(0x3d3b7a).CGColor;
+    }else if (indexPath.section == 1) {
+        cell.nameButton.layer.borderColor = UIColorFromHex(0xb487ff).CGColor;
+    }else if (indexPath.section == 2) {
+        cell.nameButton.layer.borderColor = UIColorFromHex(0x76d3ff).CGColor;
+    }
+    
     return cell;
 }
 
