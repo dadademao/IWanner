@@ -8,7 +8,7 @@
 
 #import "IWLoginCellView.h"
 
-#define MARGIN 20
+#define MARGIN 24
 
 @implementation IWLoginCellView
 
@@ -27,16 +27,19 @@
         titleLabel.y = 0;
         titleLabel.textColor = YKSubColor;
         titleLabel.textColor = [UIColor blackColor];
+        titleLabel.textColor = UIColorFromHex(0xa5a7bd);
+//        titleLabel.font = SYS_FONT(16);
+        titleLabel.font = [UIFont boldSystemFontOfSize:16];
         [self addSubview:titleLabel];
         
         UIView *segmentationView;
         if (isReference == NO) {
-           segmentationView  = [[UIView alloc] initWithFrame:CGRectMake(width + MARGIN * 0.5, MARGIN * 0.5, 1, self.height - MARGIN)];
+           segmentationView  = [[UIView alloc] initWithFrame:CGRectMake(width + MARGIN * 0.5, MARGIN * 0.5, 2, self.height - MARGIN)];
         }else{
-            segmentationView  = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(titleLabel.frame) + MARGIN, MARGIN * 0.5, 1, self.height - MARGIN)];
+            segmentationView  = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(titleLabel.frame) + MARGIN, MARGIN * 0.5, 2, self.height - MARGIN)];
             }
         
-        segmentationView.backgroundColor = YKSubColor;
+        segmentationView.backgroundColor = UIColorFromHex(0xa5a7bd);
         [self addSubview:segmentationView];
         
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(width + MARGIN, 0, self.width - width - MARGIN, self.height)];

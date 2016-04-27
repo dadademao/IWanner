@@ -16,6 +16,7 @@
     [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_highlighted",imageName]] forState:UIControlStateHighlighted];
     button.size = button.currentImage.size;
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 

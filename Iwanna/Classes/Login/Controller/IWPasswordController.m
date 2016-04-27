@@ -10,7 +10,7 @@
 #import "IWLoginCellView.h"
 #import "IWDetailedController.h"
 
-#define MARGIN 20
+#define MARGIN 32
 
 @interface IWPasswordController ()
 
@@ -22,8 +22,15 @@
     [super viewDidLoad];
     self.view.backgroundColor = YKBackColor;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick:)];;
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpacer.width = -12;
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,leftItem];    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage
+                                                                       imageNamed:@"iwanna-icon_small"]];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18]} forState:UIControlStateNormal];
+    
+    
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
