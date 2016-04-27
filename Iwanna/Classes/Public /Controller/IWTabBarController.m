@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSLog(@"addas");
     UIViewController *oneVC = [[UIViewController alloc] init];
     oneVC.view.backgroundColor = [UIColor whiteColor];
     [self addChildViewController:oneVC imageName:@"tempImage" title:@"发现"];
