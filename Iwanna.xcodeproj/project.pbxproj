@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		186615251C2ED83F007B7450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186615231C2ED83F007B7450 /* Main.storyboard */; };
+		186615271C2ED83F007B7450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186615261C2ED83F007B7450 /* Assets.xcassets */; };
+		1866152A1C2ED83F007B7450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186615281C2ED83F007B7450 /* LaunchScreen.storyboard */; };
+		1866154A1C2ED890007B7450 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 186615471C2ED890007B7450 /* main.m */; };
+		186615511C2EDB38007B7450 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 186615501C2EDB38007B7450 /* UIView+Extension.m */; };
+		186615571C2EDD68007B7450 /* IWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186615561C2EDD68007B7450 /* IWTabBarController.m */; };
+		1866155A1C2EDD8A007B7450 /* IWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186615591C2EDD8A007B7450 /* IWNavigationController.m */; };
+		186615601C2EDE90007B7450 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866155F1C2EDE90007B7450 /* UIBarButtonItem+Extension.m */; };
+		186615631C2EEB17007B7450 /* IWLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186615621C2EEB17007B7450 /* IWLoginController.m */; };
+		186615661C2EEBB6007B7450 /* IWRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186615651C2EEBB6007B7450 /* IWRegisterController.m */; };
+		186615691C2F00AC007B7450 /* IWLoginCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186615681C2F00AC007B7450 /* IWLoginCellView.m */; };
+		1866156C1C2F9505007B7450 /* IWPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866156B1C2F9505007B7450 /* IWPasswordController.m */; };
+		1866156F1C2F9835007B7450 /* IWDetailedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866156E1C2F9835007B7450 /* IWDetailedController.m */; };
+		186615781C300089007B7450 /* WMDatepicker_DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186615771C300089007B7450 /* WMDatepicker_DateModel.m */; };
+		1866157B1C300091007B7450 /* WMCustomDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866157A1C300091007B7450 /* WMCustomDatePicker.m */; };
+		18C4584C1C379727005B6059 /* IWHobbyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C4584B1C379727005B6059 /* IWHobbyController.m */; };
+		18C4584E1C37B83C005B6059 /* IWHobbySource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18C4584D1C37B83C005B6059 /* IWHobbySource.plist */; };
+		18C458511C37CFF7005B6059 /* IWHobbyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C458501C37CFF7005B6059 /* IWHobbyCell.m */; };
+		18C458591C38DD2D005B6059 /* IWMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C458581C38DD2D005B6059 /* IWMessageController.m */; };
+		18C4585C1C38DE39005B6059 /* IWMessageMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C4585B1C38DE39005B6059 /* IWMessageMainView.m */; };
+		18F2960B1C3010BC00247028 /* IWDetailedControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F2960A1C3010BC00247028 /* IWDetailedControllerView.m */; };
+		B13547A81C6AE60C00FCC6D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B13547A71C6AE60C00FCC6D4 /* AppDelegate.m */; };
+		B139919F1C3D59A9001AD302 /* YKSettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B139919E1C3D59A9001AD302 /* YKSettingsCell.m */; };
+		B13991A41C3D5C24001AD302 /* IWMine.plist in Resources */ = {isa = PBXBuildFile; fileRef = B13991A31C3D5C24001AD302 /* IWMine.plist */; };
+		B13991A71C3D6354001AD302 /* YKSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13991A61C3D6354001AD302 /* YKSettingsController.m */; };
+		B13991AA1C3D66A6001AD302 /* IWMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B13991A91C3D66A6001AD302 /* IWMineHeaderView.m */; };
+		B19B956D1C3EAB4400EC8BD4 /* YKCircularImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B956C1C3EAB4400EC8BD4 /* YKCircularImageView.m */; };
+		B1C3717F1C3C176E009919A2 /* IWMessageTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C3717E1C3C176E009919A2 /* IWMessageTopBar.m */; };
+		B1C371871C3C1FFC009919A2 /* IWMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C371861C3C1FFC009919A2 /* IWMineController.m */; };
+		B1CEB7D41C6B55AD00521AC0 /* IWOldUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB7D31C6B55AD00521AC0 /* IWOldUserLoginController.m */; };
+		B1CEB7D71C6C329300521AC0 /* IWLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB7D61C6C329300521AC0 /* IWLoginTextField.m */; };
+		B1CEB7DA1C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB7D91C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m */; };
+		B1CEB85A1C6C69E500521AC0 /* IWForgetPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		186615171C2ED83F007B7450 /* Iwanna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iwanna.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		186615241C2ED83F007B7450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		186615261C2ED83F007B7450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Assets.xcassets; sourceTree = "<group>"; };
+		186615291C2ED83F007B7450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1866152B1C2ED83F007B7450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		186615471C2ED890007B7450 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1866154E1C2EDAA8007B7450 /* YiKai.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YiKai.pch; path = ../../../YiKai.pch; sourceTree = "<group>"; };
+		1866154F1C2EDB38007B7450 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		186615501C2EDB38007B7450 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		186615551C2EDD68007B7450 /* IWTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWTabBarController.h; sourceTree = "<group>"; };
+		186615561C2EDD68007B7450 /* IWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWTabBarController.m; sourceTree = "<group>"; };
+		186615581C2EDD8A007B7450 /* IWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWNavigationController.h; sourceTree = "<group>"; };
+		186615591C2EDD8A007B7450 /* IWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWNavigationController.m; sourceTree = "<group>"; };
+		1866155E1C2EDE90007B7450 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		1866155F1C2EDE90007B7450 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		186615611C2EEB17007B7450 /* IWLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWLoginController.h; sourceTree = "<group>"; };
+		186615621C2EEB17007B7450 /* IWLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWLoginController.m; sourceTree = "<group>"; };
+		186615641C2EEBB6007B7450 /* IWRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWRegisterController.h; sourceTree = "<group>"; };
+		186615651C2EEBB6007B7450 /* IWRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWRegisterController.m; sourceTree = "<group>"; };
+		186615671C2F00AC007B7450 /* IWLoginCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWLoginCellView.h; sourceTree = "<group>"; };
+		186615681C2F00AC007B7450 /* IWLoginCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWLoginCellView.m; sourceTree = "<group>"; };
+		1866156A1C2F9505007B7450 /* IWPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWPasswordController.h; sourceTree = "<group>"; };
+		1866156B1C2F9505007B7450 /* IWPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWPasswordController.m; sourceTree = "<group>"; };
+		1866156D1C2F9835007B7450 /* IWDetailedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWDetailedController.h; sourceTree = "<group>"; };
+		1866156E1C2F9835007B7450 /* IWDetailedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWDetailedController.m; sourceTree = "<group>"; };
+		186615761C300089007B7450 /* WMDatepicker_DateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDatepicker_DateModel.h; sourceTree = "<group>"; };
+		186615771C300089007B7450 /* WMDatepicker_DateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDatepicker_DateModel.m; sourceTree = "<group>"; };
+		186615791C300091007B7450 /* WMCustomDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCustomDatePicker.h; sourceTree = "<group>"; };
+		1866157A1C300091007B7450 /* WMCustomDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCustomDatePicker.m; sourceTree = "<group>"; };
+		18C4584A1C379727005B6059 /* IWHobbyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWHobbyController.h; sourceTree = "<group>"; };
+		18C4584B1C379727005B6059 /* IWHobbyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWHobbyController.m; sourceTree = "<group>"; };
+		18C4584D1C37B83C005B6059 /* IWHobbySource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IWHobbySource.plist; sourceTree = "<group>"; };
+		18C4584F1C37CFF7005B6059 /* IWHobbyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWHobbyCell.h; sourceTree = "<group>"; };
+		18C458501C37CFF7005B6059 /* IWHobbyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWHobbyCell.m; sourceTree = "<group>"; };
+		18C458571C38DD2D005B6059 /* IWMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMessageController.h; sourceTree = "<group>"; };
+		18C458581C38DD2D005B6059 /* IWMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMessageController.m; sourceTree = "<group>"; };
+		18C4585A1C38DE39005B6059 /* IWMessageMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMessageMainView.h; sourceTree = "<group>"; };
+		18C4585B1C38DE39005B6059 /* IWMessageMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMessageMainView.m; sourceTree = "<group>"; };
+		18F296091C3010BC00247028 /* IWDetailedControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWDetailedControllerView.h; sourceTree = "<group>"; };
+		18F2960A1C3010BC00247028 /* IWDetailedControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWDetailedControllerView.m; sourceTree = "<group>"; };
+		B13547A61C6AE60C00FCC6D4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B13547A71C6AE60C00FCC6D4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B139919D1C3D59A9001AD302 /* YKSettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSettingsCell.h; sourceTree = "<group>"; };
+		B139919E1C3D59A9001AD302 /* YKSettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSettingsCell.m; sourceTree = "<group>"; };
+		B13991A31C3D5C24001AD302 /* IWMine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IWMine.plist; sourceTree = "<group>"; };
+		B13991A51C3D6354001AD302 /* YKSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSettingsController.h; sourceTree = "<group>"; };
+		B13991A61C3D6354001AD302 /* YKSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSettingsController.m; sourceTree = "<group>"; };
+		B13991A81C3D66A6001AD302 /* IWMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMineHeaderView.h; sourceTree = "<group>"; };
+		B13991A91C3D66A6001AD302 /* IWMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMineHeaderView.m; sourceTree = "<group>"; };
+		B19B956B1C3EAB4400EC8BD4 /* YKCircularImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCircularImageView.h; sourceTree = "<group>"; };
+		B19B956C1C3EAB4400EC8BD4 /* YKCircularImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCircularImageView.m; sourceTree = "<group>"; };
+		B1C3717D1C3C176E009919A2 /* IWMessageTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMessageTopBar.h; sourceTree = "<group>"; };
+		B1C3717E1C3C176E009919A2 /* IWMessageTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMessageTopBar.m; sourceTree = "<group>"; };
+		B1C371851C3C1FFC009919A2 /* IWMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMineController.h; sourceTree = "<group>"; };
+		B1C371861C3C1FFC009919A2 /* IWMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMineController.m; sourceTree = "<group>"; };
+		B1CEB7D21C6B55AD00521AC0 /* IWOldUserLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWOldUserLoginController.h; sourceTree = "<group>"; };
+		B1CEB7D31C6B55AD00521AC0 /* IWOldUserLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWOldUserLoginController.m; sourceTree = "<group>"; };
+		B1CEB7D51C6C329300521AC0 /* IWLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWLoginTextField.h; sourceTree = "<group>"; };
+		B1CEB7D61C6C329300521AC0 /* IWLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWLoginTextField.m; sourceTree = "<group>"; };
+		B1CEB7D81C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RemoveHighlightEffect.h"; sourceTree = "<group>"; };
+		B1CEB7D91C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RemoveHighlightEffect.m"; sourceTree = "<group>"; };
+		B1CEB8581C6C69E500521AC0 /* IWForgetPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWForgetPasswordView.h; sourceTree = "<group>"; };
+		B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWForgetPasswordView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		186615141C2ED83F007B7450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1866150E1C2ED83F007B7450 = {
+			isa = PBXGroup;
+			children = (
+				186615191C2ED83F007B7450 /* Iwanna */,
+				186615181C2ED83F007B7450 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		186615181C2ED83F007B7450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				186615171C2ED83F007B7450 /* Iwanna.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		186615191C2ED83F007B7450 /* Iwanna */ = {
+			isa = PBXGroup;
+			children = (
+				186615311C2ED890007B7450 /* Classes */,
+				1866152B1C2ED83F007B7450 /* Info.plist */,
+				1866151A1C2ED83F007B7450 /* Supporting Files */,
+			);
+			path = Iwanna;
+			sourceTree = "<group>";
+		};
+		1866151A1C2ED83F007B7450 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		186615311C2ED890007B7450 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B1C371801C3C1F50009919A2 /* Mine (我的) */,
+				186615321C2ED890007B7450 /* Brand (品牌) */,
+				18C458521C38DD0E005B6059 /* Message (消息) */,
+				186615371C2ED890007B7450 /* Chat (聊天) */,
+				1866153C1C2ED890007B7450 /* Login (登陆) */,
+				186615411C2ED890007B7450 /* Public  (公共) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		186615321C2ED890007B7450 /* Brand (品牌) */ = {
+			isa = PBXGroup;
+			children = (
+				186615331C2ED890007B7450 /* Controller */,
+				186615341C2ED890007B7450 /* Model */,
+				186615351C2ED890007B7450 /* Other */,
+				186615361C2ED890007B7450 /* View */,
+			);
+			name = "Brand (品牌)";
+			path = Brand;
+			sourceTree = "<group>";
+		};
+		186615331C2ED890007B7450 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		186615341C2ED890007B7450 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		186615351C2ED890007B7450 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		186615361C2ED890007B7450 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		186615371C2ED890007B7450 /* Chat (聊天) */ = {
+			isa = PBXGroup;
+			children = (
+				186615381C2ED890007B7450 /* Controller */,
+				186615391C2ED890007B7450 /* Model */,
+				1866153A1C2ED890007B7450 /* Other */,
+				1866153B1C2ED890007B7450 /* View */,
+			);
+			name = "Chat (聊天)";
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		186615381C2ED890007B7450 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		186615391C2ED890007B7450 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1866153A1C2ED890007B7450 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1866153B1C2ED890007B7450 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1866153C1C2ED890007B7450 /* Login (登陆) */ = {
+			isa = PBXGroup;
+			children = (
+				1866153D1C2ED890007B7450 /* Controller */,
+				1866153E1C2ED890007B7450 /* Model */,
+				1866153F1C2ED890007B7450 /* Other */,
+				186615401C2ED890007B7450 /* View */,
+			);
+			name = "Login (登陆)";
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1866153D1C2ED890007B7450 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				186615611C2EEB17007B7450 /* IWLoginController.h */,
+				186615621C2EEB17007B7450 /* IWLoginController.m */,
+				B1CEB7D21C6B55AD00521AC0 /* IWOldUserLoginController.h */,
+				B1CEB7D31C6B55AD00521AC0 /* IWOldUserLoginController.m */,
+				186615641C2EEBB6007B7450 /* IWRegisterController.h */,
+				186615651C2EEBB6007B7450 /* IWRegisterController.m */,
+				1866156A1C2F9505007B7450 /* IWPasswordController.h */,
+				1866156B1C2F9505007B7450 /* IWPasswordController.m */,
+				1866156D1C2F9835007B7450 /* IWDetailedController.h */,
+				1866156E1C2F9835007B7450 /* IWDetailedController.m */,
+				18C4584A1C379727005B6059 /* IWHobbyController.h */,
+				18C4584B1C379727005B6059 /* IWHobbyController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1866153E1C2ED890007B7450 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				186615761C300089007B7450 /* WMDatepicker_DateModel.h */,
+				186615771C300089007B7450 /* WMDatepicker_DateModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1866153F1C2ED890007B7450 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				18C4584D1C37B83C005B6059 /* IWHobbySource.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		186615401C2ED890007B7450 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				186615791C300091007B7450 /* WMCustomDatePicker.h */,
+				1866157A1C300091007B7450 /* WMCustomDatePicker.m */,
+				186615671C2F00AC007B7450 /* IWLoginCellView.h */,
+				186615681C2F00AC007B7450 /* IWLoginCellView.m */,
+				18F296091C3010BC00247028 /* IWDetailedControllerView.h */,
+				18F2960A1C3010BC00247028 /* IWDetailedControllerView.m */,
+				18C4584F1C37CFF7005B6059 /* IWHobbyCell.h */,
+				18C458501C37CFF7005B6059 /* IWHobbyCell.m */,
+				B1CEB7D51C6C329300521AC0 /* IWLoginTextField.h */,
+				B1CEB7D61C6C329300521AC0 /* IWLoginTextField.m */,
+				B1CEB8581C6C69E500521AC0 /* IWForgetPasswordView.h */,
+				B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		186615411C2ED890007B7450 /* Public  (公共) */ = {
+			isa = PBXGroup;
+			children = (
+				186615421C2ED890007B7450 /* Controller */,
+				1866154C1C2ED91B007B7450 /* Category */,
+				186615451C2ED890007B7450 /* Model */,
+				186615461C2ED890007B7450 /* Other */,
+				186615481C2ED890007B7450 /* View */,
+			);
+			name = "Public  (公共)";
+			path = "Public ";
+			sourceTree = "<group>";
+		};
+		186615421C2ED890007B7450 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				186615551C2EDD68007B7450 /* IWTabBarController.h */,
+				186615561C2EDD68007B7450 /* IWTabBarController.m */,
+				186615581C2EDD8A007B7450 /* IWNavigationController.h */,
+				186615591C2EDD8A007B7450 /* IWNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		186615451C2ED890007B7450 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		186615461C2ED890007B7450 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B13547A61C6AE60C00FCC6D4 /* AppDelegate.h */,
+				B13547A71C6AE60C00FCC6D4 /* AppDelegate.m */,
+				186615231C2ED83F007B7450 /* Main.storyboard */,
+				186615261C2ED83F007B7450 /* Assets.xcassets */,
+				186615281C2ED83F007B7450 /* LaunchScreen.storyboard */,
+				186615471C2ED890007B7450 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		186615481C2ED890007B7450 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B19B956B1C3EAB4400EC8BD4 /* YKCircularImageView.h */,
+				B19B956C1C3EAB4400EC8BD4 /* YKCircularImageView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1866154C1C2ED91B007B7450 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1866154E1C2EDAA8007B7450 /* YiKai.pch */,
+				B1CEB7D81C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.h */,
+				B1CEB7D91C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m */,
+				1866155E1C2EDE90007B7450 /* UIBarButtonItem+Extension.h */,
+				1866155F1C2EDE90007B7450 /* UIBarButtonItem+Extension.m */,
+				1866154F1C2EDB38007B7450 /* UIView+Extension.h */,
+				186615501C2EDB38007B7450 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		18C458521C38DD0E005B6059 /* Message (消息) */ = {
+			isa = PBXGroup;
+			children = (
+				18C458531C38DD0E005B6059 /* Controller */,
+				18C458541C38DD0E005B6059 /* Model */,
+				18C458551C38DD0E005B6059 /* Other */,
+				18C458561C38DD0E005B6059 /* View */,
+			);
+			name = "Message (消息)";
+			path = Message;
+			sourceTree = "<group>";
+		};
+		18C458531C38DD0E005B6059 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18C458571C38DD2D005B6059 /* IWMessageController.h */,
+				18C458581C38DD2D005B6059 /* IWMessageController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18C458541C38DD0E005B6059 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18C458551C38DD0E005B6059 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		18C458561C38DD0E005B6059 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18C4585A1C38DE39005B6059 /* IWMessageMainView.h */,
+				18C4585B1C38DE39005B6059 /* IWMessageMainView.m */,
+				B1C3717D1C3C176E009919A2 /* IWMessageTopBar.h */,
+				B1C3717E1C3C176E009919A2 /* IWMessageTopBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B139919C1C3D598A001AD302 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B139919D1C3D59A9001AD302 /* YKSettingsCell.h */,
+				B139919E1C3D59A9001AD302 /* YKSettingsCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B1C371801C3C1F50009919A2 /* Mine (我的) */ = {
+			isa = PBXGroup;
+			children = (
+				B1C371811C3C1F50009919A2 /* Controller */,
+				B1C371821C3C1F50009919A2 /* Model */,
+				B1C371831C3C1F50009919A2 /* Other */,
+				B1C371841C3C1F50009919A2 /* View */,
+			);
+			name = "Mine (我的)";
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		B1C371811C3C1F50009919A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B13991A51C3D6354001AD302 /* YKSettingsController.h */,
+				B13991A61C3D6354001AD302 /* YKSettingsController.m */,
+				B1C371851C3C1FFC009919A2 /* IWMineController.h */,
+				B1C371861C3C1FFC009919A2 /* IWMineController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B1C371821C3C1F50009919A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B1C371831C3C1F50009919A2 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B13991A31C3D5C24001AD302 /* IWMine.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B1C371841C3C1F50009919A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B13991A81C3D66A6001AD302 /* IWMineHeaderView.h */,
+				B13991A91C3D66A6001AD302 /* IWMineHeaderView.m */,
+				B139919C1C3D598A001AD302 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		186615161C2ED83F007B7450 /* Iwanna */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1866152E1C2ED83F007B7450 /* Build configuration list for PBXNativeTarget "Iwanna" */;
+			buildPhases = (
+				186615131C2ED83F007B7450 /* Sources */,
+				186615141C2ED83F007B7450 /* Frameworks */,
+				186615151C2ED83F007B7450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Iwanna;
+			productName = Iwanna;
+			productReference = 186615171C2ED83F007B7450 /* Iwanna.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1866150F1C2ED83F007B7450 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Iwanna;
+				TargetAttributes = {
+					186615161C2ED83F007B7450 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = YAYKB757UM;
+					};
+				};
+			};
+			buildConfigurationList = 186615121C2ED83F007B7450 /* Build configuration list for PBXProject "Iwanna" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1866150E1C2ED83F007B7450;
+			productRefGroup = 186615181C2ED83F007B7450 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				186615161C2ED83F007B7450 /* Iwanna */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		186615151C2ED83F007B7450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B13991A41C3D5C24001AD302 /* IWMine.plist in Resources */,
+				1866152A1C2ED83F007B7450 /* LaunchScreen.storyboard in Resources */,
+				186615271C2ED83F007B7450 /* Assets.xcassets in Resources */,
+				18C4584E1C37B83C005B6059 /* IWHobbySource.plist in Resources */,
+				186615251C2ED83F007B7450 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		186615131C2ED83F007B7450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1866156C1C2F9505007B7450 /* IWPasswordController.m in Sources */,
+				186615571C2EDD68007B7450 /* IWTabBarController.m in Sources */,
+				B1CEB85A1C6C69E500521AC0 /* IWForgetPasswordView.m in Sources */,
+				18F2960B1C3010BC00247028 /* IWDetailedControllerView.m in Sources */,
+				18C4585C1C38DE39005B6059 /* IWMessageMainView.m in Sources */,
+				18C4584C1C379727005B6059 /* IWHobbyController.m in Sources */,
+				1866156F1C2F9835007B7450 /* IWDetailedController.m in Sources */,
+				186615601C2EDE90007B7450 /* UIBarButtonItem+Extension.m in Sources */,
+				186615661C2EEBB6007B7450 /* IWRegisterController.m in Sources */,
+				B1CEB7D41C6B55AD00521AC0 /* IWOldUserLoginController.m in Sources */,
+				186615511C2EDB38007B7450 /* UIView+Extension.m in Sources */,
+				B1CEB7DA1C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m in Sources */,
+				B13991AA1C3D66A6001AD302 /* IWMineHeaderView.m in Sources */,
+				B1CEB7D71C6C329300521AC0 /* IWLoginTextField.m in Sources */,
+				B1C3717F1C3C176E009919A2 /* IWMessageTopBar.m in Sources */,
+				B139919F1C3D59A9001AD302 /* YKSettingsCell.m in Sources */,
+				18C458591C38DD2D005B6059 /* IWMessageController.m in Sources */,
+				1866154A1C2ED890007B7450 /* main.m in Sources */,
+				B19B956D1C3EAB4400EC8BD4 /* YKCircularImageView.m in Sources */,
+				B13991A71C3D6354001AD302 /* YKSettingsController.m in Sources */,
+				1866155A1C2EDD8A007B7450 /* IWNavigationController.m in Sources */,
+				186615781C300089007B7450 /* WMDatepicker_DateModel.m in Sources */,
+				18C458511C37CFF7005B6059 /* IWHobbyCell.m in Sources */,
+				1866157B1C300091007B7450 /* WMCustomDatePicker.m in Sources */,
+				B13547A81C6AE60C00FCC6D4 /* AppDelegate.m in Sources */,
+				186615691C2F00AC007B7450 /* IWLoginCellView.m in Sources */,
+				B1C371871C3C1FFC009919A2 /* IWMineController.m in Sources */,
+				186615631C2EEB17007B7450 /* IWLoginController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		186615231C2ED83F007B7450 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				186615241C2ED83F007B7450 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		186615281C2ED83F007B7450 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				186615291C2ED83F007B7450 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1866152C1C2ED83F007B7450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1866152D1C2ED83F007B7450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1866152F1C2ED83F007B7450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Iwanna/Classes/Public",
+					/Libs/EaseMobSDK/3rdparty/Parse,
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Iwanna/YiKai.pch";
+				INFOPLIST_FILE = Iwanna/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Iwanna/Classes/Public",
+					/Libs/EaseMobSDK/lib,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = none.Iwanna;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		186615301C2ED83F007B7450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Iwanna/Classes/Public",
+					/Libs/EaseMobSDK/3rdparty/Parse,
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Iwanna/YiKai.pch";
+				INFOPLIST_FILE = Iwanna/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Iwanna/Classes/Public",
+					/Libs/EaseMobSDK/lib,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = none.Iwanna;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		186615121C2ED83F007B7450 /* Build configuration list for PBXProject "Iwanna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1866152C1C2ED83F007B7450 /* Debug */,
+				1866152D1C2ED83F007B7450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1866152E1C2ED83F007B7450 /* Build configuration list for PBXNativeTarget "Iwanna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1866152F1C2ED83F007B7450 /* Debug */,
+				186615301C2ED83F007B7450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1866150F1C2ED83F007B7450 /* Project object */;
+}

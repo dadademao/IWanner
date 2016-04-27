@@ -1,0 +1,50 @@
+
+// 头文件宏定义
+
+#ifndef __01_YiKai_pch
+#define __01_YiKai_pch
+
+#ifdef __OBJC__
+
+/******************环信头文件******************/
+
+//#import "EaseMob.h"
+/******************环信头文件******************/
+
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+// 颜色
+#define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+// 主色调
+#define YKMainColor [UIColor colorWithRed:61 / 255.0 green:59 / 255.0 blue:122 / 255.0 alpha:1]
+// 背景色
+#define YKBackColor [UIColor colorWithRed:230 / 255.0 green: 232/ 255.0 blue:250 / 255.0 alpha:1]
+// 辅助色
+#define YKSubColor [UIColor colorWithRed:165 / 255.0 green: 167/ 255.0 blue:189 / 255.0 alpha:1]
+
+// 随机颜色
+#define RandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1]
+// 系统字体
+#define SYS_FONT(x) [UIFont systemFontOfSize:x]
+// 偏好设置
+#define YKUserDefaults [NSUserDefaults standardUserDefaults]
+// 通知中心
+#define YKNotificationCenter [NSNotificationCenter defaultCenter]
+// 屏幕宽度
+#define SCREENW [UIScreen mainScreen].bounds.size.width
+// 屏幕高度
+#define SCREENH [UIScreen mainScreen].bounds.size.height
+// 比例
+#define kPP [UIScreen mainScreen].bounds.size.width / 375
+
+#endif
+
+#endif

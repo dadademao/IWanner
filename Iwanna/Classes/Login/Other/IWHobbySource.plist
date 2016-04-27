@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>headerView</key>
+		<string>选择符合您的标签?</string>
+		<key>titleColor</key>
+		<string>blueColor</string>
+		<key>title</key>
+		<array>
+			<string>豪华游艇</string>
+			<string>私人飞机</string>
+			<string>超级跑车</string>
+			<string>高级家具</string>
+			<string>高级珠宝</string>
+		</array>
+	</dict>
+	<dict>
+		<key>titleColor</key>
+		<string>redColoe</string>
+		<key>title</key>
+		<array>
+			<string>旅游</string>
+			<string>地产</string>
+			<string>投资</string>
+			<string>服饰</string>
+			<string>聚会</string>
+		</array>
+	</dict>
+	<dict>
+		<key>titleColor</key>
+		<string>greenColor</string>
+		<key>title</key>
+		<array>
+			<string>服饰</string>
+			<string>严谨</string>
+			<string>热情</string>
+			<string>严谨</string>
+			<string>热情</string>
+		</array>
+	</dict>
+</array>
+</plist>
