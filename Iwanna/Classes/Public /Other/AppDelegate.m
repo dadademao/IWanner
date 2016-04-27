@@ -22,7 +22,7 @@
     [self setNavigationBarStyle];
     // 统一设置状态栏外观
     application.statusBarStyle = UIStatusBarStyleLightContent;
-    
+    NSLog(@"helloYiKai");
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[IWLoginController alloc] init];
     
