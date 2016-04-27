@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IWDetailedController : UIViewController
+@interface IWDetailedController : IWBaseViewController
 
 @end

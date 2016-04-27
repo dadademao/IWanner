@@ -37,7 +37,6 @@
         //这句代码代码调用原来的方法
         [self yk_setHighlighted:highlighted];
     }
-    NSLog(@"%s",__func__);
 }
 
 - (void)setRemoveHighlightEffect:(BOOL)removeHighlightEffect{

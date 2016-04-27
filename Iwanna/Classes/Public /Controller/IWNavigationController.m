@@ -14,17 +14,11 @@
 
 @implementation IWNavigationController
 
-//- (UIStatusBarStyle)preferredStatusBarStyle{
-//    return UIStatusBarStyleLightContent;
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:UIBarMetricsDefault];
     
-//    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
-//    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:UIBarMetricsDefault];
+
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[NSForegroundColorAttributeName] = [UIColor whiteColor];
@@ -55,17 +49,18 @@
     // 如果执行到这个地方,判断里面有一个控制器的话,代码当家要往导航控制里面push的是第二个控制器
     if (self.childViewControllers.count >= 1) {
         
-        if (self.childViewControllers.count == 1) {
-            title = [[self.childViewControllers firstObject] title];
-        }
+//        if (self.childViewControllers.count == 1) {
+//            title = [[self.childViewControllers firstObject] title];
+//        }
+        
         // 隐藏底部tabBar
         viewController.hidesBottomBarWhenPushed = YES;
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"navigationbar_back_withtext" title:title target:self action:@selector(back)];
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"navigation_back" target:self action:@selector(leftBarButtonItemClick:)];
     }
     [super pushViewController:viewController animated:animated];
 }
 
-- (void)back{
+- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
     [self popViewControllerAnimated:YES];
 }
 

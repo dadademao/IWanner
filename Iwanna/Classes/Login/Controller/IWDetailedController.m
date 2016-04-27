@@ -29,7 +29,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick:)];;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
@@ -197,10 +196,6 @@
     self.selectedBtn.selected = NO;
     self.selectedBtn = button;
     self.selectedBtn.selected = YES;
-}
-
-- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)rightBarButtonItemClick:(UIBarButtonItem *)item{

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IWRegisterController : UIViewController
+@interface IWRegisterController : IWBaseViewController
 
 @end

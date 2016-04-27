@@ -22,9 +22,13 @@
     [self setNavigationBarStyle];
     // 统一设置状态栏外观
     application.statusBarStyle = UIStatusBarStyleLightContent;
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[IWLoginController alloc] init];
+    if (0) {
+        self.window.rootViewController = [[IWLoginController alloc] init];
+    }else{
+        self.window.rootViewController = [[IWTabBarController alloc] init];
+    }
+    
     
     // 设置环信
 //    [[EaseMob sharedInstance] registerSDKWithAppKey:@"yikai#yikaidemo" apnsCertName:nil];
