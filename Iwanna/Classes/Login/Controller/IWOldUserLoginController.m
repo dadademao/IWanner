@@ -11,7 +11,11 @@
 #import "IWForgetPasswordView.h"
 
 @interface IWOldUserLoginController ()
-@property (weak, nonatomic) IBOutlet IWLoginTextField *phoneNumTextField;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *userNameTF;
+
+@property (weak, nonatomic) IBOutlet UITextField *passWordTF;
 
 
 
@@ -21,31 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor redColor];
-//    [self addSubViews];
+
+    
+    
 }
 
-- (void)addSubViews{
-    
-    
-    CGFloat margin = 20;
-    IWLoginTextField *phoneNumTextField = [[IWLoginTextField alloc] initWithFrame:CGRectMake(margin, self.view.height * 0.5, self.view.width - 2 * margin, 45) andPlaceholder:@"手机号/昵称"];
-    self.phoneNumTextField = phoneNumTextField;
-    [phoneNumTextField.attributeBtn setImage:[UIImage imageNamed:@"tempImage"] forState:UIControlStateNormal];
-    phoneNumTextField.textField.keyboardType = UIKeyboardTypeNumberPad;
-    [self.view addSubview:phoneNumTextField];
-    
-    IWLoginTextField *passwordTextField = [[IWLoginTextField alloc] initWithFrame:CGRectMake(margin, CGRectGetMaxY(phoneNumTextField.frame) + margin, self.view.width - 2 * margin, 45) andPlaceholder:@"输入密码"];
-    [passwordTextField.attributeBtn setImage:[UIImage imageNamed:@"tempImage"] forState:UIControlStateNormal];
-    [self.view addSubview:passwordTextField];
-    
-//    UIButton *forgetPasswordBtn = [[UIButton alloc] init];
-//    forgetPasswordBtn.imageView.backgroundColor = [UIColor redColor];
-//    forgetPasswordBtn.titleLabel.text = @"忘记密码";
-//    [forgetPasswordBtn sizeToFit];
-//    forgetPasswordBtn.x = margin;
-//    forgetPasswordBtn.y = CGRectGetMaxY(passwordTextField.frame) + margin;
-//    [self.view addSubview:forgetPasswordBtn];
+- (IBAction)loginBtnClick:(id)sender {
+    NSLog(@"登录");
 }
 
 - (void)didReceiveMemoryWarning {
