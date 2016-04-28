@@ -30,8 +30,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     
-<<<<<<< HEAD
-=======
+
     UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     negativeSpacer.width = -12;
@@ -39,7 +38,7 @@
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage
                                                                        imageNamed:@"iwanna-icon_small"]];
     
->>>>>>> kingwang
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18]} forState:UIControlStateNormal];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
