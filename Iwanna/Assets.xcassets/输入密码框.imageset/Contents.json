@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "输入密码框.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "用户名.png",
       "scale" : "2x"
     },
     {

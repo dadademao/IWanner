@@ -23,7 +23,7 @@
     // 统一设置状态栏外观
     application.statusBarStyle = UIStatusBarStyleLightContent;
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    if (0) {
+    if (1) {
         self.window.rootViewController = [[IWLoginController alloc] init];
     }else{
         self.window.rootViewController = [[IWTabBarController alloc] init];

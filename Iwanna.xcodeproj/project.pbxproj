@@ -90,8 +90,9 @@
 		B1CEB7D71C6C329300521AC0 /* IWLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB7D61C6C329300521AC0 /* IWLoginTextField.m */; };
 		B1CEB7DA1C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB7D91C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m */; };
 		B1CEB85A1C6C69E500521AC0 /* IWForgetPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */; };
-		F7BC12D91CD0A94B002657C2 /* NetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC12D61CD0A94B002657C2 /* NetWorkHelper.m */; };
 		C98B5F201CD0C37300870FA3 /* IWOldUserLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */; };
+		C98B5F271CD1ED9800870FA3 /* APRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */; };
+		F7BC12D91CD0A94B002657C2 /* NetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC12D61CD0A94B002657C2 /* NetWorkHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -262,9 +263,11 @@
 		B1CEB7D91C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RemoveHighlightEffect.m"; sourceTree = "<group>"; };
 		B1CEB8581C6C69E500521AC0 /* IWForgetPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWForgetPasswordView.h; sourceTree = "<group>"; };
 		B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWForgetPasswordView.m; sourceTree = "<group>"; };
+		C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IWOldUserLoginController.xib; sourceTree = "<group>"; };
+		C98B5F251CD1ED9800870FA3 /* APRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRoundedButton.h; sourceTree = "<group>"; };
+		C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRoundedButton.m; sourceTree = "<group>"; };
 		F7BC12D51CD0A94B002657C2 /* NetWorkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkHelper.h; sourceTree = "<group>"; };
 		F7BC12D61CD0A94B002657C2 /* NetWorkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkHelper.m; sourceTree = "<group>"; };
-		C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IWOldUserLoginController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +457,8 @@
 		1866153F1C2ED890007B7450 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				C98B5F251CD1ED9800870FA3 /* APRoundedButton.h */,
+				C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */,
 				18C4584D1C37B83C005B6059 /* IWHobbySource.plist */,
 			);
 			path = Other;
@@ -920,6 +925,7 @@
 				186615571C2EDD68007B7450 /* IWTabBarController.m in Sources */,
 				B1768A021CD1145500829146 /* UIWebView+AFNetworking.m in Sources */,
 				B1CEB85A1C6C69E500521AC0 /* IWForgetPasswordView.m in Sources */,
+				C98B5F271CD1ED9800870FA3 /* APRoundedButton.m in Sources */,
 				B1768A001CD1145500829146 /* UIProgressView+AFNetworking.m in Sources */,
 				18F2960B1C3010BC00247028 /* IWDetailedControllerView.m in Sources */,
 				B1768A4C1CD1148B00829146 /* SDWebImageCompat.m in Sources */,
