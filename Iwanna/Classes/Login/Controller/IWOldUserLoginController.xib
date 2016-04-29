@@ -22,6 +22,9 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8z-Kx-DkY">
                             <rect key="frame" x="113" y="167" width="140" height="43"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="rFk-VY-7Fd"/>
+                            </constraints>
                             <state key="normal" title="登   录" backgroundImage="登陆">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -60,7 +63,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
-                        <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="| 手机号/昵称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCh-gh-p7Z">
+                        <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="| 手机号/昵称" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gCh-gh-p7Z">
                             <rect key="frame" x="81" y="0.0" width="286" height="38"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -89,14 +92,14 @@
                                 </mask>
                             </variation>
                         </button>
-                        <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="| 输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLx-HB-fXe">
+                        <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="| 输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CLx-HB-fXe">
                             <rect key="frame" x="82" y="54" width="285" height="38"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="6aA-0Z-QR2"/>
                             </constraints>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="6aA-0Z-QR2"/>
