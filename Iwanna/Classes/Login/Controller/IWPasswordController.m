@@ -54,6 +54,11 @@
     [self.navigationController pushViewController:[[IWDetailedController alloc] init] animated:YES];
 }
 
+- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
+    NSLog(@"123");
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     

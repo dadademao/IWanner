@@ -92,6 +92,7 @@
 		B1CEB85A1C6C69E500521AC0 /* IWForgetPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */; };
 		C98B5F201CD0C37300870FA3 /* IWOldUserLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */; };
 		C98B5F271CD1ED9800870FA3 /* APRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */; };
+		C98B5F2B1CD2087E00870FA3 /* OJMeInfomationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B5F291CD2087E00870FA3 /* OJMeInfomationController.m */; };
 		F7BC12D91CD0A94B002657C2 /* NetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC12D61CD0A94B002657C2 /* NetWorkHelper.m */; };
 /* End PBXBuildFile section */
 
@@ -266,6 +267,8 @@
 		C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IWOldUserLoginController.xib; sourceTree = "<group>"; };
 		C98B5F251CD1ED9800870FA3 /* APRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRoundedButton.h; sourceTree = "<group>"; };
 		C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRoundedButton.m; sourceTree = "<group>"; };
+		C98B5F281CD2087E00870FA3 /* OJMeInfomationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJMeInfomationController.h; sourceTree = "<group>"; };
+		C98B5F291CD2087E00870FA3 /* OJMeInfomationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJMeInfomationController.m; sourceTree = "<group>"; };
 		F7BC12D51CD0A94B002657C2 /* NetWorkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkHelper.h; sourceTree = "<group>"; };
 		F7BC12D61CD0A94B002657C2 /* NetWorkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -789,6 +792,8 @@
 				B13991A61C3D6354001AD302 /* YKSettingsController.m */,
 				B1C371851C3C1FFC009919A2 /* IWMineController.h */,
 				B1C371861C3C1FFC009919A2 /* IWMineController.m */,
+				C98B5F281CD2087E00870FA3 /* OJMeInfomationController.h */,
+				C98B5F291CD2087E00870FA3 /* OJMeInfomationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -867,6 +872,7 @@
 		1866150F1C2ED83F007B7450 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = OJ;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Iwanna;
 				TargetAttributes = {
@@ -976,6 +982,7 @@
 				B1768A571CD1148B00829146 /* UIImageView+WebCache.m in Sources */,
 				B17689FF1CD1145500829146 /* UIImageView+AFNetworking.m in Sources */,
 				B17689F21CD1145500829146 /* AFHTTPSessionManager.m in Sources */,
+				C98B5F2B1CD2087E00870FA3 /* OJMeInfomationController.m in Sources */,
 				B1768A531CD1148B00829146 /* UIImage+GIF.m in Sources */,
 				B1768A191CD1146300829146 /* NSObject+MJKeyValue.m in Sources */,
 				18C458511C37CFF7005B6059 /* IWHobbyCell.m in Sources */,

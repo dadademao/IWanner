@@ -11,14 +11,15 @@
 @implementation YKSettingsCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView withDict:(NSDictionary *)dict{
+    
     // 创建cell
     static NSString *ID = @"setting_cell";
     YKSettingsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
     if (!cell) {
         // 根据字典里面的cellStyle的值来动态确定UITableViewCellStyle的类型
         cell = [[YKSettingsCell alloc] initWithStyle:[self cellStyleWithDict:dict] reuseIdentifier:ID];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 

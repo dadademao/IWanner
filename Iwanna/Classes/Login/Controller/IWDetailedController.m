@@ -216,6 +216,11 @@
     self.selectedBtn.selected = YES;
 }
 
+- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
+    NSLog(@"123");
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)rightBarButtonItemClick:(UIBarButtonItem *)item{
     [self.navigationController pushViewController:[[IWHobbyController alloc] init] animated:YES];
 }

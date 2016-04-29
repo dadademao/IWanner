@@ -8,6 +8,9 @@
 
 #import "IWMineController.h"
 #import "IWMineHeaderView.h"
+#import "OJMeInfomationController.h"
+#import "IWNavigationController.h"
+
 
 @interface IWMineController () <IWMineHeaderViewDelegate>
 
@@ -33,7 +36,9 @@
 }
 
 - (void)mineHeaderViewClick{
- 
+    NSLog(@"跳转个人信息");
+    OJMeInfomationController *meInfoVc = [[OJMeInfomationController alloc]init];
+    [self.navigationController presentViewController:[[IWNavigationController alloc] initWithRootViewController:meInfoVc] animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
