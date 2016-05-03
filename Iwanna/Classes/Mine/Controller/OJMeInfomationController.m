@@ -73,29 +73,12 @@ static NSString * const ID = @"cell";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    if (section == 0) {
-//        return 4;
-//    }else if(section == 1){
-//        return 2;
-//    }else{
-//        return 2;
-//    }
+
     // 取出第section组的组模型
     OJMeInfoGroup *group = self.groups[section];
     return group.meInfos.count;
 }
 
-//// 编辑cell的脚标签(没有内容的时候也不会报错)
-//- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-//    OJMeInfoGroup *group = self.groups[section];
-//    return group.footer;
-//}
-//
-//// 编辑cell的头标签(没有内容的时候也不会报错)
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-//    OJMeInfoGroup *group = self.groups[section];
-//    return group.header;
-//}
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -122,12 +105,19 @@ static NSString * const ID = @"cell";
         cell1.textLabel.text = meInfo.title;
         
         cell1.meInfoView.image = [UIImage imageNamed:meInfo.details];
+        cell1.textLabel.textColor = UIColorFromHex(0x3d3b7a);
+        cell1.textLabel.font = [UIFont systemFontOfSize:16];
+        
         return cell1;
     }
     
     // 设置数据
     cell.textLabel.text = meInfo.title;
     cell.detailTextLabel.text = meInfo.details;
+    cell.detailTextLabel.textColor = UIColorFromHex(0xa4a8bb);
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:16];
+    cell.textLabel.textColor = UIColorFromHex(0x3d3b7a);
+    cell1.textLabel.font = [UIFont systemFontOfSize:16];
     return cell;
 }
 
