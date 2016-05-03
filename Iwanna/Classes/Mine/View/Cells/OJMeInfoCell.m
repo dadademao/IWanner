@@ -10,18 +10,30 @@
 #import "OJMeInfo.h"
 
 
+@interface OJMeInfoCell()
+@property (weak, nonatomic) IBOutlet UIImageView *meInfoView;
+@property (weak, nonatomic) IBOutlet UILabel *meInfoLabel;
+
+@end
+
 
 @implementation OJMeInfoCell
+
+- (void)setMeInfo:(OJMeInfo *)meInfo{
+    _meInfo = meInfo;
+    self.meInfoLabel.text = meInfo.title;
+    _meInfoView.image = [UIImage imageNamed:meInfo.details];
+    self.meInfoLabel.textColor = UIColorFromHex(0x3d3b7a);
+//    self.meInfoLabel.font = [UIFont systemFontOfSize:16];
+    self.meInfoLabel.font = [UIFont systemFontOfSize:16];
+    
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
 }
 
--(void)setMeInfo:(OJMeInfo *)meInfo
-{
-    
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

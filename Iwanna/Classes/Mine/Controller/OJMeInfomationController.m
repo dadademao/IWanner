@@ -86,7 +86,6 @@ static NSString * const ID = @"cell";
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
     
     
-    OJMeInfoCell *cell1 = [[NSBundle mainBundle]loadNibNamed:@"OJMeInfoCell" owner:nil options:nil].lastObject;
     
     
 //    cell.imageView.image = [UIImage imageNamed:@"mine_defaultHeader"];
@@ -97,17 +96,18 @@ static NSString * const ID = @"cell";
     // 取出indexPath.secton这组的组模型
     OJMeInfoGroup *group = self.groups[indexPath.section];
     
-    // 取出indexPath.row对应的车模型
+    // 取出indexPath.row对应的meinfo模型
     OJMeInfo *meInfo = group.meInfos[indexPath.row];
     
     if (indexPath.row == 0 && indexPath.section == 0) {
+        OJMeInfoCell *cell1 = [[NSBundle mainBundle]loadNibNamed:@"OJMeInfoCell" owner:nil options:nil].lastObject;
         //        cell.imageView.image = [UIImage imageNamed:@"mine_defaultHeader"];
-        cell1.textLabel.text = meInfo.title;
-        
-        cell1.meInfoView.image = [UIImage imageNamed:meInfo.details];
-        cell1.textLabel.textColor = UIColorFromHex(0x3d3b7a);
-        cell1.textLabel.font = [UIFont systemFontOfSize:16];
-        
+//        cell1.textLabel.text = meInfo.title;
+//        
+//        cell1.meInfoView.image = [UIImage imageNamed:meInfo.details];
+//        cell1.textLabel.textColor = UIColorFromHex(0x3d3b7a);
+//        cell1.textLabel.font = [UIFont systemFontOfSize:16];
+        cell1.meInfo = meInfo;
         return cell1;
     }
     
@@ -117,8 +117,9 @@ static NSString * const ID = @"cell";
     cell.detailTextLabel.textColor = UIColorFromHex(0xa4a8bb);
     cell.detailTextLabel.font = [UIFont systemFontOfSize:16];
     cell.textLabel.textColor = UIColorFromHex(0x3d3b7a);
-    cell1.textLabel.font = [UIFont systemFontOfSize:16];
+    
     return cell;
+    
 }
 
 

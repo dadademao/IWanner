@@ -95,6 +95,8 @@
 		C9144EB91CD7AD24000682F1 /* OJMeInfoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C9144EB81CD7AD24000682F1 /* OJMeInfoGroup.m */; };
 		C9144EBF1CD846C4000682F1 /* OJMeInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9144EBD1CD846C4000682F1 /* OJMeInfoCell.m */; };
 		C9144EC01CD846C4000682F1 /* OJMeInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9144EBE1CD846C4000682F1 /* OJMeInfoCell.xib */; };
+		C9144EC41CD8AD92000682F1 /* OJMeCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9144EC21CD8AD92000682F1 /* OJMeCollectController.m */; };
+		C9144EC71CD8ADEE000682F1 /* OJMeCollectController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9144EC61CD8ADEE000682F1 /* OJMeCollectController.storyboard */; };
 		C98B5F201CD0C37300870FA3 /* IWOldUserLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */; };
 		C98B5F271CD1ED9800870FA3 /* APRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */; };
 		C98B5F2B1CD2087E00870FA3 /* OJMeInfomationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B5F291CD2087E00870FA3 /* OJMeInfomationController.m */; };
@@ -277,6 +279,9 @@
 		C9144EBC1CD846C4000682F1 /* OJMeInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJMeInfoCell.h; sourceTree = "<group>"; };
 		C9144EBD1CD846C4000682F1 /* OJMeInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJMeInfoCell.m; sourceTree = "<group>"; };
 		C9144EBE1CD846C4000682F1 /* OJMeInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OJMeInfoCell.xib; sourceTree = "<group>"; };
+		C9144EC11CD8AD92000682F1 /* OJMeCollectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJMeCollectController.h; sourceTree = "<group>"; };
+		C9144EC21CD8AD92000682F1 /* OJMeCollectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJMeCollectController.m; sourceTree = "<group>"; };
+		C9144EC61CD8ADEE000682F1 /* OJMeCollectController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OJMeCollectController.storyboard; sourceTree = "<group>"; };
 		C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IWOldUserLoginController.xib; sourceTree = "<group>"; };
 		C98B5F251CD1ED9800870FA3 /* APRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRoundedButton.h; sourceTree = "<group>"; };
 		C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRoundedButton.m; sourceTree = "<group>"; };
@@ -810,6 +815,9 @@
 				B1C371861C3C1FFC009919A2 /* IWMineController.m */,
 				C98B5F281CD2087E00870FA3 /* OJMeInfomationController.h */,
 				C98B5F291CD2087E00870FA3 /* OJMeInfomationController.m */,
+				C9144EC11CD8AD92000682F1 /* OJMeCollectController.h */,
+				C9144EC21CD8AD92000682F1 /* OJMeCollectController.m */,
+				C9144EC61CD8ADEE000682F1 /* OJMeCollectController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -934,6 +942,7 @@
 				1866152A1C2ED83F007B7450 /* LaunchScreen.storyboard in Resources */,
 				186615271C2ED83F007B7450 /* Assets.xcassets in Resources */,
 				18C4584E1C37B83C005B6059 /* IWHobbySource.plist in Resources */,
+				C9144EC71CD8ADEE000682F1 /* OJMeCollectController.storyboard in Resources */,
 				C98B5F201CD0C37300870FA3 /* IWOldUserLoginController.xib in Resources */,
 				186615251C2ED83F007B7450 /* Main.storyboard in Resources */,
 			);
@@ -991,6 +1000,7 @@
 				B17689F51CD1145500829146 /* AFURLRequestSerialization.m in Sources */,
 				B1CEB7DA1C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m in Sources */,
 				B13991AA1C3D66A6001AD302 /* IWMineHeaderView.m in Sources */,
+				C9144EC41CD8AD92000682F1 /* OJMeCollectController.m in Sources */,
 				B1768A651CD114AF00829146 /* MALTabBarItemModel.m in Sources */,
 				B1CEB7D71C6C329300521AC0 /* IWLoginTextField.m in Sources */,
 				B1C3717F1C3C176E009919A2 /* IWMessageTopBar.m in Sources */,

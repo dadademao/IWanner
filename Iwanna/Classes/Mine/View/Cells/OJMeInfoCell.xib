@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="287" height="104.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_defaultHeader" translatesAutoresizingMaskIntoConstraints="NO" id="e6M-fm-Apr">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6M-fm-Apr">
                         <rect key="frame" x="186" y="10" width="85" height="85"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="85" id="Ffi-O1-OjC"/>
@@ -30,11 +30,19 @@
                             </mask>
                         </variation>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPi-l6-xow">
+                        <rect key="frame" x="20" y="42" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="JPi-l6-xow" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DIB-b7-WIf"/>
                     <constraint firstItem="e6M-fm-Apr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Icf-Oi-t4c"/>
                     <constraint firstItem="e6M-fm-Apr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ONc-Xg-4P0"/>
                     <constraint firstAttribute="bottom" secondItem="e6M-fm-Apr" secondAttribute="bottom" constant="10" id="PYk-w4-HbY"/>
+                    <constraint firstItem="JPi-l6-xow" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="brx-dv-srz"/>
                     <constraint firstItem="e6M-fm-Apr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="lPf-9K-Ip5"/>
                     <constraint firstAttribute="trailing" secondItem="e6M-fm-Apr" secondAttribute="trailing" constant="16" id="pVS-ID-WME"/>
                     <constraint firstAttribute="trailingMargin" secondItem="e6M-fm-Apr" secondAttribute="trailing" constant="70" id="qpu-6a-RtA"/>
@@ -49,12 +57,10 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="meInfoView" destination="e6M-fm-Apr" id="Bla-z0-JIy"/>
+                <outlet property="meInfoLabel" destination="JPi-l6-xow" id="7N7-C6-ZJf"/>
+                <outlet property="meInfoView" destination="e6M-fm-Apr" id="oaC-tp-lha"/>
             </connections>
             <point key="canvasLocation" x="226" y="290.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="mine_defaultHeader" width="99" height="99"/>
-    </resources>
 </document>

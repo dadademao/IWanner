@@ -1,5 +1,5 @@
 //
-//  OJMeInfoCell.h
+//  OJMeCollectController.h
 //  Iwanna
 //
 //  Created by One'J on 16/5/3.
@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IWMineHeaderView.h"
 
-@class OJMeInfo;
-
-@interface OJMeInfoCell : UITableViewCell
-
-
-@property(nonatomic,strong) OJMeInfo *meInfo;
+@interface OJMeCollectController : UITableViewController
 
 @end
