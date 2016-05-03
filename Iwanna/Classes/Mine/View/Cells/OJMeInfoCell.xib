@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" focusStyle="custom" rowHeight="86" id="KGk-i7-Jjw" customClass="OJMeInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="104.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_defaultHeader" translatesAutoresizingMaskIntoConstraints="NO" id="e6M-fm-Apr">
+                        <rect key="frame" x="186" y="10" width="85" height="85"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="85" id="Ffi-O1-OjC"/>
+                            <constraint firstAttribute="width" constant="40" id="SrR-tl-JdN"/>
+                            <constraint firstAttribute="height" constant="190" id="aZh-2p-klo"/>
+                            <constraint firstAttribute="width" constant="85" id="t3y-AB-nbH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SrR-tl-JdN"/>
+                                <exclude reference="aZh-2p-klo"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="e6M-fm-Apr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Icf-Oi-t4c"/>
+                    <constraint firstItem="e6M-fm-Apr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ONc-Xg-4P0"/>
+                    <constraint firstAttribute="bottom" secondItem="e6M-fm-Apr" secondAttribute="bottom" constant="10" id="PYk-w4-HbY"/>
+                    <constraint firstItem="e6M-fm-Apr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="lPf-9K-Ip5"/>
+                    <constraint firstAttribute="trailing" secondItem="e6M-fm-Apr" secondAttribute="trailing" constant="16" id="pVS-ID-WME"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="e6M-fm-Apr" secondAttribute="trailing" constant="70" id="qpu-6a-RtA"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="ONc-Xg-4P0"/>
+                        <exclude reference="PYk-w4-HbY"/>
+                        <exclude reference="lPf-9K-Ip5"/>
+                        <exclude reference="qpu-6a-RtA"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="meInfoView" destination="e6M-fm-Apr" id="Bla-z0-JIy"/>
+            </connections>
+            <point key="canvasLocation" x="226" y="290.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mine_defaultHeader" width="99" height="99"/>
+    </resources>
+</document>

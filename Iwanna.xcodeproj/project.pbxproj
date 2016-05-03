@@ -90,6 +90,11 @@
 		B1CEB7D71C6C329300521AC0 /* IWLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB7D61C6C329300521AC0 /* IWLoginTextField.m */; };
 		B1CEB7DA1C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB7D91C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m */; };
 		B1CEB85A1C6C69E500521AC0 /* IWForgetPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */; };
+		C9144EAF1CD7A6F0000682F1 /* IWMeInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9144EAE1CD7A6F0000682F1 /* IWMeInfo.plist */; };
+		C9144EB61CD7AC96000682F1 /* OJMeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C9144EB51CD7AC96000682F1 /* OJMeInfo.m */; };
+		C9144EB91CD7AD24000682F1 /* OJMeInfoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C9144EB81CD7AD24000682F1 /* OJMeInfoGroup.m */; };
+		C9144EBF1CD846C4000682F1 /* OJMeInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9144EBD1CD846C4000682F1 /* OJMeInfoCell.m */; };
+		C9144EC01CD846C4000682F1 /* OJMeInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9144EBE1CD846C4000682F1 /* OJMeInfoCell.xib */; };
 		C98B5F201CD0C37300870FA3 /* IWOldUserLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */; };
 		C98B5F271CD1ED9800870FA3 /* APRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */; };
 		C98B5F2B1CD2087E00870FA3 /* OJMeInfomationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B5F291CD2087E00870FA3 /* OJMeInfomationController.m */; };
@@ -264,6 +269,14 @@
 		B1CEB7D91C6C379C00521AC0 /* UIButton+RemoveHighlightEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RemoveHighlightEffect.m"; sourceTree = "<group>"; };
 		B1CEB8581C6C69E500521AC0 /* IWForgetPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWForgetPasswordView.h; sourceTree = "<group>"; };
 		B1CEB8591C6C69E500521AC0 /* IWForgetPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWForgetPasswordView.m; sourceTree = "<group>"; };
+		C9144EAE1CD7A6F0000682F1 /* IWMeInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IWMeInfo.plist; sourceTree = "<group>"; };
+		C9144EB41CD7AC96000682F1 /* OJMeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJMeInfo.h; sourceTree = "<group>"; };
+		C9144EB51CD7AC96000682F1 /* OJMeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJMeInfo.m; sourceTree = "<group>"; };
+		C9144EB71CD7AD24000682F1 /* OJMeInfoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJMeInfoGroup.h; sourceTree = "<group>"; };
+		C9144EB81CD7AD24000682F1 /* OJMeInfoGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJMeInfoGroup.m; sourceTree = "<group>"; };
+		C9144EBC1CD846C4000682F1 /* OJMeInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJMeInfoCell.h; sourceTree = "<group>"; };
+		C9144EBD1CD846C4000682F1 /* OJMeInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJMeInfoCell.m; sourceTree = "<group>"; };
+		C9144EBE1CD846C4000682F1 /* OJMeInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OJMeInfoCell.xib; sourceTree = "<group>"; };
 		C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IWOldUserLoginController.xib; sourceTree = "<group>"; };
 		C98B5F251CD1ED9800870FA3 /* APRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRoundedButton.h; sourceTree = "<group>"; };
 		C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRoundedButton.m; sourceTree = "<group>"; };
@@ -606,6 +619,9 @@
 			children = (
 				B139919D1C3D59A9001AD302 /* YKSettingsCell.h */,
 				B139919E1C3D59A9001AD302 /* YKSettingsCell.m */,
+				C9144EBC1CD846C4000682F1 /* OJMeInfoCell.h */,
+				C9144EBD1CD846C4000682F1 /* OJMeInfoCell.m */,
+				C9144EBE1CD846C4000682F1 /* OJMeInfoCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -776,8 +792,8 @@
 		B1C371801C3C1F50009919A2 /* Mine (我的) */ = {
 			isa = PBXGroup;
 			children = (
+				C9144EB31CD7AC84000682F1 /* Model */,
 				B1C371811C3C1F50009919A2 /* Controller */,
-				B1C371821C3C1F50009919A2 /* Model */,
 				B1C371831C3C1F50009919A2 /* Other */,
 				B1C371841C3C1F50009919A2 /* View */,
 			);
@@ -798,17 +814,11 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		B1C371821C3C1F50009919A2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		B1C371831C3C1F50009919A2 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				B13991A31C3D5C24001AD302 /* IWMine.plist */,
+				C9144EAE1CD7A6F0000682F1 /* IWMeInfo.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -821,6 +831,17 @@
 				B139919C1C3D598A001AD302 /* Cells */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C9144EB31CD7AC84000682F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9144EB41CD7AC96000682F1 /* OJMeInfo.h */,
+				C9144EB51CD7AC96000682F1 /* OJMeInfo.m */,
+				C9144EB71CD7AD24000682F1 /* OJMeInfoGroup.h */,
+				C9144EB81CD7AD24000682F1 /* OJMeInfoGroup.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F7BC12D41CD0A94B002657C2 /* Bussiness */ = {
@@ -905,7 +926,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9144EC01CD846C4000682F1 /* OJMeInfoCell.xib in Resources */,
 				B1768A241CD1147D00829146 /* SVProgressHUD.bundle in Resources */,
+				C9144EAF1CD7A6F0000682F1 /* IWMeInfo.plist in Resources */,
 				B17689F81CD1145500829146 /* LICENSE in Resources */,
 				B13991A41C3D5C24001AD302 /* IWMine.plist in Resources */,
 				1866152A1C2ED83F007B7450 /* LaunchScreen.storyboard in Resources */,
@@ -928,6 +951,7 @@
 				B1768A181CD1146300829146 /* NSObject+MJIvar.m in Sources */,
 				1866156C1C2F9505007B7450 /* IWPasswordController.m in Sources */,
 				B1768A561CD1148B00829146 /* UIImageView+HighlightedWebCache.m in Sources */,
+				C9144EB91CD7AD24000682F1 /* OJMeInfoGroup.m in Sources */,
 				186615571C2EDD68007B7450 /* IWTabBarController.m in Sources */,
 				B1768A021CD1145500829146 /* UIWebView+AFNetworking.m in Sources */,
 				B1CEB85A1C6C69E500521AC0 /* IWForgetPasswordView.m in Sources */,
@@ -935,6 +959,7 @@
 				B1768A001CD1145500829146 /* UIProgressView+AFNetworking.m in Sources */,
 				18F2960B1C3010BC00247028 /* IWDetailedControllerView.m in Sources */,
 				B1768A4C1CD1148B00829146 /* SDWebImageCompat.m in Sources */,
+				C9144EB61CD7AC96000682F1 /* OJMeInfo.m in Sources */,
 				B1768A4D1CD1148B00829146 /* SDWebImageDecoder.m in Sources */,
 				18C4585C1C38DE39005B6059 /* IWMessageMainView.m in Sources */,
 				B17689FD1CD1145500829146 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -981,6 +1006,7 @@
 				B1768A131CD1146300829146 /* MJConst.m in Sources */,
 				B1768A571CD1148B00829146 /* UIImageView+WebCache.m in Sources */,
 				B17689FF1CD1145500829146 /* UIImageView+AFNetworking.m in Sources */,
+				C9144EBF1CD846C4000682F1 /* OJMeInfoCell.m in Sources */,
 				B17689F21CD1145500829146 /* AFHTTPSessionManager.m in Sources */,
 				C98B5F2B1CD2087E00870FA3 /* OJMeInfomationController.m in Sources */,
 				B1768A531CD1148B00829146 /* UIImage+GIF.m in Sources */,

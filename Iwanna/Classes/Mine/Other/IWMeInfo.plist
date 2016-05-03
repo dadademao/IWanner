@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>header</key>
+		<string>                     </string>
+		<key>footer</key>
+		<string>                  </string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>头像</string>
+				<key>details</key>
+				<string>mine_defaultHeader</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>名字</string>
+				<key>details</key>
+				<string>周大然</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>性别</string>
+				<key>details</key>
+				<string>男</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>生日</string>
+				<key>details</key>
+				<string>15/06/03</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>所在城市</string>
+				<key>details</key>
+				<string>北京朝阳区</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>header</key>
+		<string>                  </string>
+		<key>footer</key>
+		<string>                 </string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>电话</string>
+				<key>details</key>
+				<string>18655448086</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>邮箱</string>
+				<key>details</key>
+				<string>828282882@gmail.com</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>header</key>
+		<string>                </string>
+		<key>footer</key>
+		<string>               </string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>我的标签</string>
+				<key>details</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>New item</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
