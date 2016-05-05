@@ -12,7 +12,6 @@
 #import "NSDate+CL.h"
 
 @interface YKSmallCalendarView () <UIGestureRecognizerDelegate, YKDateViewDelegate>
-//@property (nonatomic, weak) UIView *dateImageView;
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
 @property (nonatomic, assign) NSInteger weekStartConfig;
@@ -166,7 +165,6 @@
     unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
     NSDateComponents* comp1 = [calendar components:unitFlags fromDate:date1];
     NSDateComponents* comp2 = [calendar components:unitFlags fromDate:date2];
-    
     return [comp1 day] == [comp2 day] && [comp1 month] == [comp2 month] && [comp1 year]  == [comp2 year];
 }
 

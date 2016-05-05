@@ -22,7 +22,7 @@ UITableViewDelegate,
 UITableViewDataSource
 >
 
-@property (nonatomic, strong) YKBigCalendarView * bigCalendarView;
+@property (nonatomic, strong) YKBigCalendarView *bigCalendarView;
 @property (nonatomic, weak) YKSmallCalendarView *smallCalendarView;
 @property (nonatomic, strong) IWCalendarSelectedView *selectecView;
 @property (nonatomic, weak) UIButton *navigationRightButton;
