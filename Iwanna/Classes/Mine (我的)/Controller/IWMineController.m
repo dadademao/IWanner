@@ -18,6 +18,7 @@
 
 @implementation IWMineController
 
+
 - (void)viewDidLoad{
     
     [super viewDidLoad];
