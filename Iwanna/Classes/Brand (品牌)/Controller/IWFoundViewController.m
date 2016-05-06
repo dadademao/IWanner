@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSLog(@"1314");
     [self setNavigation];
     
     [self addSubViews];
