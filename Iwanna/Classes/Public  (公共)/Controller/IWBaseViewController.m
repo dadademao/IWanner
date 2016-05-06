@@ -18,7 +18,7 @@
     [super viewDidLoad];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navigation_titleView"]];
     self.navigationItem.titleView = imageView;
-    
+    self.view.backgroundColor = YKBackColor;
 }
 
 
