@@ -22,7 +22,12 @@ typedef NS_ENUM(NSUInteger, RequestUrlTag) {
     /**
      *  获取验证码
      */
-    kBussinessGetVerificationCode = 1002
+    kBussinessGetVerificationCode = 1002,
+    
+    /**
+     *  获取所有标签
+     */
+    kBussinessGetAllLabels = 1003
 };
 
 

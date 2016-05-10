@@ -47,4 +47,15 @@
                                               complete:(Complete)completeBlock
                                                  error:(NetWorkErrorBlock)errorBlock;
 
+
+/**
+ *  获取标签
+ *
+ *  @param completeBlock 完成
+ *  @param errorBlock    失败
+ *
+ *  @return <#return value description#>
+ */
++ (NSURLSessionDataTask *) getLabelsComplete:(Complete)completeBlock
+                                       error:(NetWorkErrorBlock)errorBlock;
 @end

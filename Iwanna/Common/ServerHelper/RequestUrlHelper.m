@@ -25,6 +25,9 @@
 //获取验证码
 #define USER_GET_VERIFICATIONS @"get_sms_verification_code"
 
+//获取所有标签
+#define GET_ALL_LABEL @"get_all_taglist"
+
 #import "RequestUrlHelper.h"
 
 @implementation RequestUrlHelper
@@ -39,6 +42,9 @@
             break;
         case kBussinessGetVerificationCode:
             return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,USER_GET_VERIFICATIONS];
+            break;
+        case kBussinessGetAllLabels:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_ALL_LABEL];
             break;
         default:
             return @"";

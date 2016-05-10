@@ -10,6 +10,7 @@
 #import "RequestUrlHelper.h"
 #import "UserInfoModel.h"
 #import "VerificationModel.h"
+#import "LabelModel.h"
 @implementation UserProvider
 
 /**
@@ -105,7 +106,48 @@
     return [[NetWorkHelper shareManager] postRequest:header body:dic serverAPIURL:url completeBlock:^(NSDictionary *responseDict, NSDictionary *responseHeader) {
         if ([responseDict[@"code"] longValue] == 1) {
             VerificationModel *model = [VerificationModel modelObjectWithDictionary:responseDict[@"data"][0]];
+            
             HttpResultModel *result = [HttpResultModel getSuccessInstance:model];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completeBlock(result);
+                
+            });
+        } else {
+            HttpResultModel *result = [HttpResultModel getWarningWithMsg:responseDict[@"message"]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completeBlock(result);
+                
+            });
+        }
+    } errorBlock:^(NSError *error) {
+        errorBlock(error);
+    } finishedBlock:^(NSError *error) {
+        errorBlock(error);
+    }];
+}
+
+
+/**
+ *  获取标签
+ *
+ *  @param completeBlock 完成
+ *  @param errorBlock    失败
+ *
+ *  @return <#return value description#>
+ */
++ (NSURLSessionDataTask *) getLabelsComplete:(Complete)completeBlock
+                                       error:(NetWorkErrorBlock)errorBlock {
+    NSString *url = [RequestUrlHelper createRequestURL:kBussinessGetAllLabels];
+    NSMutableDictionary *header = [[self class] getDefaultRequestHeader:YES url:url];
+    return [[NetWorkHelper shareManager] postRequest:header body:nil serverAPIURL:url completeBlock:^(NSDictionary *responseDict, NSDictionary *responseHeader) {
+        if ([responseDict[@"code"] longValue] == 1) {
+            NSMutableArray *ary = [NSMutableArray array];
+            for (NSDictionary *dic in responseDict[@"data"]) {
+                LabelModel *model = [LabelModel modelObjectWithDictionary:dic];
+                [ary addObject:model];
+            }
+            
+            HttpResultModel *result = [HttpResultModel getSuccessInstance:ary];
             dispatch_async(dispatch_get_main_queue(), ^{
                 completeBlock(result);
                 
