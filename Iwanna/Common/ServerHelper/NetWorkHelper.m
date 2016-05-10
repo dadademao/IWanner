@@ -19,7 +19,7 @@
         _helper.requestSerializer  = [AFJSONRequestSerializer serializer];
 //
         _helper.responseSerializer = [AFJSONResponseSerializer serializer];
-        _helper.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+        _helper.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];;
 
         _helper.requestSerializer.timeoutInterval = 15;
     });
@@ -62,6 +62,7 @@
 
     [[NetWorkHelper shareManager] setCustomHeader:serverAPIURL header:header];
     NSMutableURLRequest *request =  [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:serverAPIURL parameters:body error:nil];
+    
     NSURLSessionDataTask *dataTask =   [[NetWorkHelper shareManager] dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
@@ -85,7 +86,7 @@
 
     [[NetWorkHelper shareManager] setCustomHeader:serverAPIURL header:header];
     NSMutableURLRequest *request =  [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:serverAPIURL parameters:nil error:nil];
-
+    
     NSURLSessionDataTask *dataTask =   [[NetWorkHelper shareManager] dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error: %@", error);
