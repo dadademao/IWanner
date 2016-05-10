@@ -28,6 +28,12 @@
 //获取所有标签
 #define GET_ALL_LABEL @"get_all_taglist"
 
+//修改密码
+#define MODIFY_PASSWORD @"mod_pswd_do"
+
+//获取用户个人信息
+#define GET_USER_INFO @"get_user_info"
+
 #import "RequestUrlHelper.h"
 
 @implementation RequestUrlHelper
@@ -45,6 +51,12 @@
             break;
         case kBussinessGetAllLabels:
             return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_ALL_LABEL];
+            break;
+        case kBussinessMidifyPassword:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,MODIFY_PASSWORD];
+            break;
+        case kBussinessGetUserInfo:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_USER_INFO];
             break;
         default:
             return @"";

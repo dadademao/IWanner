@@ -27,7 +27,17 @@ typedef NS_ENUM(NSUInteger, RequestUrlTag) {
     /**
      *  获取所有标签
      */
-    kBussinessGetAllLabels = 1003
+    kBussinessGetAllLabels = 1003,
+    
+    /**
+     *  修改密码
+     */
+    kBussinessMidifyPassword = 1004,
+    
+    /**
+     *  获取个人信息
+     */
+    kBussinessGetUserInfo = 1005
 };
 
 

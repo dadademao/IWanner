@@ -31,12 +31,8 @@
     // 设置环信
 //    [[EaseMob sharedInstance] registerSDKWithAppKey:@"yikai#yikaidemo" apnsCertName:nil];
 //    [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-//    [UserProvider getLabelsComplete:^(HttpResultModel *result) {
-//        
-//    } error:^(NSError *error) {
-//        
-//    }];
-//    
+
+
     [self.window makeKeyAndVisible];
     
     
