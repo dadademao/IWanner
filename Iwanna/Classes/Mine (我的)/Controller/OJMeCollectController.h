@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "IWMineHeaderView.h"
 
-@interface OJMeCollectController : UITableViewController
+@interface OJMeCollectController : IWBaseViewController
 
 @end

@@ -10,6 +10,7 @@
 #import "IWMineHeaderView.h"
 #import "OJMeInfomationController.h"
 #import "IWNavigationController.h"
+#import "OJMeCollectController.h"
 
 
 @interface IWMineController () <IWMineHeaderViewDelegate>
@@ -44,6 +45,19 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 2 && indexPath.section == 0) {
+        NSLog(@"我的收藏");
+       
+        OJMeCollectController *meCollectVC = [[OJMeCollectController alloc]init];
+
+        [self.navigationController presentViewController:[[IWNavigationController alloc] initWithRootViewController:meCollectVC] animated:YES completion:nil];
+        
+
+    }
 }
 
 
