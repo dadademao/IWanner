@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Iwanna/Bussiness/UserProvider/UserProvider.m"
-            timestampString = "484542232.112936"
+            timestampString = "484546891.681816"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "+registWithDic:complete:error:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Iwanna/Bussiness/UserProvider/UserProvider.m"
-            timestampString = "484542244.395605"
+            timestampString = "484546891.681816"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "+registWithDic:complete:error:"
             landmarkType = "5">
          </BreakpointContent>

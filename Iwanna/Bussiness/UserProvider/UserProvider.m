@@ -8,6 +8,8 @@
 
 #import "UserProvider.h"
 #import "RequestUrlHelper.h"
+#import "UserInfoModel.h"
+#import "VerificationModel.h"
 @implementation UserProvider
 
 /**
@@ -24,12 +26,14 @@
     NSMutableDictionary *header = [[self class] getDefaultRequestHeader:YES url:url];
     return [[NetWorkHelper shareManager] postRequest:header body:dic serverAPIURL:url completeBlock:^(NSDictionary *responseDict, NSDictionary *responseHeader) {
         if ([responseDict[@"code"] longValue] == 1) {
-            HttpResultModel *result = [HttpResultModel getSuccessInstance:responseDict[@"data"]];
+            UserInfoModel *model = [UserInfoModel modelObjectWithDictionary:responseDict[@"data"][0]];
+            HttpResultModel *result = [HttpResultModel getSuccessInstance:model];
             dispatch_async(dispatch_get_main_queue(), ^{
                 compelteBlock(result);
                 
             });
         } else {
+            
             HttpResultModel *result = [HttpResultModel getWarningWithMsg:responseDict[@"message"]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 compelteBlock(result);
@@ -61,7 +65,47 @@
     NSMutableDictionary *header = [[self class] getDefaultRequestHeader:YES url:url];
     return [[NetWorkHelper shareManager] postRequest:header body:dic serverAPIURL:url completeBlock:^(NSDictionary *responseDict, NSDictionary *responseHeader) {
         if ([responseDict[@"code"] longValue] == 1) {
-            HttpResultModel *result = [HttpResultModel getSuccessInstance:responseDict[@"data"]];
+            UserInfoModel *model = [UserInfoModel modelObjectWithDictionary:responseDict[@"data"][0]];
+
+            HttpResultModel *result = [HttpResultModel getSuccessInstance:model];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completeBlock(result);
+                
+            });
+        } else {
+            HttpResultModel *result = [HttpResultModel getWarningWithMsg:responseDict[@"message"]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completeBlock(result);
+                
+            });
+        }
+    } errorBlock:^(NSError *error) {
+        errorBlock(error);
+    } finishedBlock:^(NSError *error) {
+        errorBlock(error);
+    }];
+}
+
+
+/**
+ *  获取验证码
+ *
+ *  @param phoneNum      手机号码
+ *  @param completeBlock 成功
+ *  @param errorBlock    失败
+ *
+ *  @return <#return value description#>
+ */
++ (NSURLSessionDataTask *) getVerificationWithPhoneNum:(NSString *)phoneNum
+                                              complete:(Complete)completeBlock
+                                                 error:(NetWorkErrorBlock)errorBlock {
+    NSString *url = [RequestUrlHelper createRequestURL:kBussinessGetVerificationCode];
+    NSMutableDictionary *header = [[self class] getDefaultRequestHeader:YES url:url];
+    NSDictionary *dic = @{@"phone":phoneNum};
+    return [[NetWorkHelper shareManager] postRequest:header body:dic serverAPIURL:url completeBlock:^(NSDictionary *responseDict, NSDictionary *responseHeader) {
+        if ([responseDict[@"code"] longValue] == 1) {
+            VerificationModel *model = [VerificationModel modelObjectWithDictionary:responseDict[@"data"][0]];
+            HttpResultModel *result = [HttpResultModel getSuccessInstance:model];
             dispatch_async(dispatch_get_main_queue(), ^{
                 completeBlock(result);
                 

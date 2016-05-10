@@ -120,6 +120,8 @@
 		F793172A1CE179C900309155 /* HttpResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F79317291CE179C900309155 /* HttpResultModel.m */; };
 		F793172E1CE17A2E00309155 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F793172D1CE17A2E00309155 /* BaseModel.m */; };
 		F79317311CE17D9300309155 /* RequestUrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F79317301CE17D9300309155 /* RequestUrlHelper.m */; };
+		F79317371CE1986500309155 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F79317341CE1986500309155 /* UserInfoModel.m */; };
+		F79317381CE1986500309155 /* VerificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F79317361CE1986500309155 /* VerificationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -346,6 +348,10 @@
 		F793172D1CE17A2E00309155 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		F793172F1CE17D9300309155 /* RequestUrlHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestUrlHelper.h; sourceTree = "<group>"; };
 		F79317301CE17D9300309155 /* RequestUrlHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestUrlHelper.m; sourceTree = "<group>"; };
+		F79317331CE1986500309155 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		F79317341CE1986500309155 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
+		F79317351CE1986500309155 /* VerificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerificationModel.h; sourceTree = "<group>"; };
+		F79317361CE1986500309155 /* VerificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -972,10 +978,22 @@
 		F793172B1CE17A1E00309155 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F79317321CE1986500309155 /* UserModel */,
 				F793172C1CE17A2E00309155 /* BaseModel.h */,
 				F793172D1CE17A2E00309155 /* BaseModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F79317321CE1986500309155 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				F79317331CE1986500309155 /* UserInfoModel.h */,
+				F79317341CE1986500309155 /* UserInfoModel.m */,
+				F79317351CE1986500309155 /* VerificationModel.h */,
+				F79317361CE1986500309155 /* VerificationModel.m */,
+			);
+			path = UserModel;
 			sourceTree = "<group>";
 		};
 		F7BC12D41CD0A94B002657C2 /* Bussiness */ = {
@@ -1148,7 +1166,9 @@
 				B1ADA0691CD538B6007768B7 /* YKDateView.m in Sources */,
 				B1BE68E91CD1FC76005DBDB0 /* IWFoundActivityController.m in Sources */,
 				B17689F21CD1145500829146 /* AFHTTPSessionManager.m in Sources */,
+				F79317371CE1986500309155 /* UserInfoModel.m in Sources */,
 				C98B5F2B1CD2087E00870FA3 /* OJMeInfomationController.m in Sources */,
+				F79317381CE1986500309155 /* VerificationModel.m in Sources */,
 				B1768A531CD1148B00829146 /* UIImage+GIF.m in Sources */,
 				B1768A191CD1146300829146 /* NSObject+MJKeyValue.m in Sources */,
 				18C458511C37CFF7005B6059 /* IWHobbyCell.m in Sources */,

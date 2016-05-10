@@ -17,7 +17,12 @@ typedef NS_ENUM(NSUInteger, RequestUrlTag) {
     /**
      *  用户登陆
      */
-    kBussinessUserLogin = 1001
+    kBussinessUserLogin = 1001,
+    
+    /**
+     *  获取验证码
+     */
+    kBussinessGetVerificationCode = 1002
 };
 
 

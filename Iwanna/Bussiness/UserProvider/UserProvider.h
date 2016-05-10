@@ -34,4 +34,17 @@
                                complete:(Complete)completeBlock
                                   error:(NetWorkErrorBlock)errorBlock;
 
+/**
+ *  获取验证码
+ *
+ *  @param phoneNum      手机号码
+ *  @param completeBlock 成功
+ *  @param errorBlock    失败
+ *
+ *  @return <#return value description#>
+ */
++ (NSURLSessionDataTask *) getVerificationWithPhoneNum:(NSString *)phoneNum
+                                              complete:(Complete)completeBlock
+                                                 error:(NetWorkErrorBlock)errorBlock;
+
 @end

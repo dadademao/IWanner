@@ -17,11 +17,13 @@
  */
 #define USER_REGIST @"register"
 
-
 /**
  *  登陆
  */
 #define USER_LOGIN @"login"
+
+//获取验证码
+#define USER_GET_VERIFICATIONS @"get_sms_verification_code"
 
 #import "RequestUrlHelper.h"
 
@@ -34,6 +36,9 @@
             break;
         case kBussinessUserLogin:
             return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,USER_LOGIN];
+            break;
+        case kBussinessGetVerificationCode:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,USER_GET_VERIFICATIONS];
             break;
         default:
             return @"";
