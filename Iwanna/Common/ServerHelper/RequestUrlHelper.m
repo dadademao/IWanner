@@ -17,6 +17,12 @@
  */
 #define USER_REGIST @"register"
 
+
+/**
+ *  登陆
+ */
+#define USER_LOGIN @"login"
+
 #import "RequestUrlHelper.h"
 
 @implementation RequestUrlHelper
@@ -26,7 +32,9 @@
         case KBussinessUserRequest:
             return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,USER_REGIST];
             break;
-            
+        case kBussinessUserLogin:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,USER_LOGIN];
+            break;
         default:
             return @"";
             break;

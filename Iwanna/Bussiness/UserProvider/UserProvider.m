@@ -43,4 +43,40 @@
     }];
 }
 
+
+
+/**
+ *  登陆接口
+ *
+ *  @param dic           登陆信息
+ *  @param completeBlock 完成
+ *  @param errorBlock    失败
+ *
+ *  @return <#return value description#>
+ */
++ (NSURLSessionDataTask *) loginWithDic:(NSDictionary *)dic
+                               complete:(Complete)completeBlock
+                                  error:(NetWorkErrorBlock)errorBlock {
+    NSString *url = [RequestUrlHelper createRequestURL:kBussinessUserLogin];
+    NSMutableDictionary *header = [[self class] getDefaultRequestHeader:YES url:url];
+    return [[NetWorkHelper shareManager] postRequest:header body:dic serverAPIURL:url completeBlock:^(NSDictionary *responseDict, NSDictionary *responseHeader) {
+        if ([responseDict[@"code"] longValue] == 1) {
+            HttpResultModel *result = [HttpResultModel getSuccessInstance:responseDict[@"data"]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completeBlock(result);
+                
+            });
+        } else {
+            HttpResultModel *result = [HttpResultModel getWarningWithMsg:responseDict[@"message"]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completeBlock(result);
+                
+            });
+        }
+    } errorBlock:^(NSError *error) {
+        errorBlock(error);
+    } finishedBlock:^(NSError *error) {
+        errorBlock(error);
+    }];
+}
 @end

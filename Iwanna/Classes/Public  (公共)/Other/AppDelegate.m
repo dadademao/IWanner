@@ -31,7 +31,12 @@
     // 设置环信
 //    [[EaseMob sharedInstance] registerSDKWithAppKey:@"yikai#yikaidemo" apnsCertName:nil];
 //    [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-
+//    NSDictionary *dic = @{@"phone":@"13022939966",@"password":@"aaa"};
+//    [UserProvider loginWithDic:dic complete:^(HttpResultModel *result) {
+//        
+//    } error:^(NSError *error) {
+//        
+//    }];
     
     [self.window makeKeyAndVisible];
     

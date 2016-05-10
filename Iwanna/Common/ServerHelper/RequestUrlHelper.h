@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, RequestUrlTag) {
     KBussinessUserRequest = 1000,
     
     /**
-     *  用户输入
+     *  用户登陆
      */
     kBussinessUserLogin = 1001
 };

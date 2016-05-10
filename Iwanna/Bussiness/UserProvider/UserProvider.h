@@ -21,4 +21,17 @@
               complete:(Complete)compelteBlock
                  error:(NetWorkErrorBlock)errorBlock;
 
+/**
+ *  登陆接口
+ *
+ *  @param dic           登陆信息
+ *  @param completeBlock 完成
+ *  @param errorBlock    失败
+ *
+ *  @return <#return value description#>
+ */
++ (NSURLSessionDataTask *) loginWithDic:(NSDictionary *)dic
+                               complete:(Complete)completeBlock
+                                  error:(NetWorkErrorBlock)errorBlock;
+
 @end
