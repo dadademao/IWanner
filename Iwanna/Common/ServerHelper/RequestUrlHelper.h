@@ -37,7 +37,12 @@ typedef NS_ENUM(NSUInteger, RequestUrlTag) {
     /**
      *  获取个人信息
      */
-    kBussinessGetUserInfo = 1005
+    kBussinessGetUserInfo = 1005,
+    
+    /**
+     *  获取发现首页
+     */
+    kBussinessGetDescoverHome = 1006
 };
 
 

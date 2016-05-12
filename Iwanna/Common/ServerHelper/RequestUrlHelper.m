@@ -34,6 +34,9 @@
 //获取用户个人信息
 #define GET_USER_INFO @"get_user_info"
 
+//获取发现首页
+#define GET_DESCOVER_HOME @"get_discovery_main"
+
 #import "RequestUrlHelper.h"
 
 @implementation RequestUrlHelper
@@ -57,6 +60,9 @@
             break;
         case kBussinessGetUserInfo:
             return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_USER_INFO];
+            break;
+        case kBussinessGetDescoverHome:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_DESCOVER_HOME];
             break;
         default:
             return @"";
