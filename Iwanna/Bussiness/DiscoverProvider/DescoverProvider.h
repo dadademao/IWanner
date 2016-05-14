@@ -23,4 +23,17 @@
                                                 error:(NetWorkErrorBlock)errorBlock;
 
 
+/**
+ *  获取新鲜事
+ *
+ *  @param dic           请求参数
+ *  @param completeBlock 完成
+ *  @param errorBlock    失败
+ *
+ *  @return <#return value description#>
+ */
++ (NSURLSessionDataTask *) getNewestListWithDic:(NSDictionary *)dic
+                                       complete:(Complete)completeBlock
+                                          error:(NetWorkErrorBlock)errorBlock;
+
 @end

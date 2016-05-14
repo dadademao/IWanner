@@ -42,7 +42,18 @@ typedef NS_ENUM(NSUInteger, RequestUrlTag) {
     /**
      *  获取发现首页
      */
-    kBussinessGetDescoverHome = 1006
+    kBussinessGetDescoverHome = 1006,
+    
+    /**
+     *  获取新鲜事
+     */
+    kBussinessGetNewest = 1007,
+    
+    /**
+     *  获取产品类型列表
+     */
+    kBussinessGetProductTypeList = 1008
+    
 };
 
 

@@ -37,6 +37,12 @@
 //获取发现首页
 #define GET_DESCOVER_HOME @"get_discovery_main"
 
+//获取新鲜事
+#define GET_NEWEST @"get_new_list"
+
+//获取产品类型
+#define GET_PRODUCT_LIST @"get_product_type_list"
+
 #import "RequestUrlHelper.h"
 
 @implementation RequestUrlHelper
@@ -63,6 +69,12 @@
             break;
         case kBussinessGetDescoverHome:
             return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_DESCOVER_HOME];
+            break;
+        case kBussinessGetNewest:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_NEWEST];
+            break;
+        case kBussinessGetProductTypeList:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_PRODUCT_LIST];
             break;
         default:
             return @"";

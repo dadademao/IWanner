@@ -114,6 +114,8 @@
 		C98B5F201CD0C37300870FA3 /* IWOldUserLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98B5F1F1CD0C37300870FA3 /* IWOldUserLoginController.xib */; };
 		C98B5F271CD1ED9800870FA3 /* APRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */; };
 		C98B5F2B1CD2087E00870FA3 /* OJMeInfomationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98B5F291CD2087E00870FA3 /* OJMeInfomationController.m */; };
+		F77748E21CE4385E00C134BA /* BaseNewestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F77748DF1CE4385E00C134BA /* BaseNewestModel.m */; };
+		F77748E31CE4385E00C134BA /* NewestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F77748E11CE4385E00C134BA /* NewestModel.m */; };
 		F793171F1CE176E600309155 /* NetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F793171E1CE176E600309155 /* NetWorkHelper.m */; };
 		F79317231CE177C100309155 /* BaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F79317221CE177C100309155 /* BaseProvider.m */; };
 		F79317261CE1788B00309155 /* UserProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F79317251CE1788B00309155 /* UserProvider.m */; };
@@ -341,6 +343,10 @@
 		C98B5F261CD1ED9800870FA3 /* APRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRoundedButton.m; sourceTree = "<group>"; };
 		C98B5F281CD2087E00870FA3 /* OJMeInfomationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJMeInfomationController.h; sourceTree = "<group>"; };
 		C98B5F291CD2087E00870FA3 /* OJMeInfomationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJMeInfomationController.m; sourceTree = "<group>"; };
+		F77748DE1CE4385E00C134BA /* BaseNewestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNewestModel.h; sourceTree = "<group>"; };
+		F77748DF1CE4385E00C134BA /* BaseNewestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNewestModel.m; sourceTree = "<group>"; };
+		F77748E01CE4385E00C134BA /* NewestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewestModel.h; sourceTree = "<group>"; };
+		F77748E11CE4385E00C134BA /* NewestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewestModel.m; sourceTree = "<group>"; };
 		F793171D1CE176E600309155 /* NetWorkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkHelper.h; sourceTree = "<group>"; };
 		F793171E1CE176E600309155 /* NetWorkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkHelper.m; sourceTree = "<group>"; };
 		F79317211CE177C100309155 /* BaseProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseProvider.h; sourceTree = "<group>"; };
@@ -1036,6 +1042,10 @@
 		F7BE79FF1CE42280007C65CD /* DescoverHomeModel */ = {
 			isa = PBXGroup;
 			children = (
+				F77748DE1CE4385E00C134BA /* BaseNewestModel.h */,
+				F77748DF1CE4385E00C134BA /* BaseNewestModel.m */,
+				F77748E01CE4385E00C134BA /* NewestModel.h */,
+				F77748E11CE4385E00C134BA /* NewestModel.m */,
 				F7BE7A001CE42280007C65CD /* DescoverHomeModel.h */,
 				F7BE7A011CE42280007C65CD /* DescoverHomeModel.m */,
 				F7BE7A021CE42280007C65CD /* ListHuodong.h */,
@@ -1159,6 +1169,7 @@
 				B1768A4D1CD1148B00829146 /* SDWebImageDecoder.m in Sources */,
 				B1F4EEC91CD32DC700F2C148 /* YKBigCalendarView.m in Sources */,
 				18C4585C1C38DE39005B6059 /* IWMessageMainView.m in Sources */,
+				F77748E31CE4385E00C134BA /* NewestModel.m in Sources */,
 				B17689FD1CD1145500829146 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				B1768A541CD1148B00829146 /* UIImage+MultiFormat.m in Sources */,
 				B1BE68DD1CD1E6D2005DBDB0 /* IWFoundChildView.m in Sources */,
@@ -1167,6 +1178,7 @@
 				F79317231CE177C100309155 /* BaseProvider.m in Sources */,
 				B1768A4A1CD1148B00829146 /* NSData+ImageContentType.m in Sources */,
 				B1BE68EC1CD20154005DBDB0 /* IWFoundNewCell.m in Sources */,
+				F77748E21CE4385E00C134BA /* BaseNewestModel.m in Sources */,
 				B1ADA0641CD53764007768B7 /* NSDate+CL.m in Sources */,
 				F79317311CE17D9300309155 /* RequestUrlHelper.m in Sources */,
 				1866156F1C2F9835007B7450 /* IWDetailedController.m in Sources */,
