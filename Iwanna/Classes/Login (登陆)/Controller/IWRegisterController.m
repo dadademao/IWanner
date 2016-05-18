@@ -21,11 +21,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = YKBackColor;
+
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"navigation_back" target:self action:@selector(leftBarButtonItemClick:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"right" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+
     
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick:)];
+//    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpacer.width = -12;
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,leftItem];
+    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage
+                                                                       imageNamed:@"iwanna-icon_small"]];
+
+    
+    UIBarButtonItem *rightItem = [UIBarButtonItem itemWithImageName:@"next-icon" target:self action:@selector(rightBarButtonItemClick:)];
+//    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+//    negativeSpacer.width = -12;
+    self.navigationItem.rightBarButtonItems = @[negativeSpacer,rightItem];
+    
+                                             
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"right" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
+//    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
+//    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+
     [self addSubViews];
 }
 
@@ -42,6 +64,7 @@
     
     CGFloat buttonW = 80;
     UIButton *sendBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREENW - buttonW, 0, buttonW, subViewH)];
+    sendBtn.titleLabel.font = SYS_FONT(16);
     [sendBtn setBackgroundColor:YKMainColor];
     [sendBtn setTitle:@"发送" forState:UIControlStateNormal];
     [sendBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

@@ -36,12 +36,23 @@
         headerImage.image = [UIImage imageNamed:@"mine_defaultHeader"];
         [self addSubview:headerImage];
         
+        //增加image点击事件
+        headerImage.userInteractionEnabled = YES;
+        UITapGestureRecognizer *singleTap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onClickImage)];
+        [headerImage addGestureRecognizer:singleTap];
+        
         // 轻触手势(点按)
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureAction:)];
         [self addGestureRecognizer:tap];
     }
     return self;
 }
+
+- (void)onClickImage{
+    NSLog(@"imageClick");
+    
+}
+
 
 - (void)layoutSubviews{
     [super layoutSubviews];

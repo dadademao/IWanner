@@ -17,7 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:UIBarMetricsDefault];
+
+
+    
+//    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
+//    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
 
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];

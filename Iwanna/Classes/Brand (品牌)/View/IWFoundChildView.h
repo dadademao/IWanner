@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class IWFoundChildViewModel;
+@class ListHuodong, ListXinxianshi;
 
 @interface IWFoundChildView : UIView
 
-@property (nonatomic, strong) IWFoundChildViewModel *childViewModel;
+@property (nonatomic, strong) ListHuodong *huodong;
+@property (nonatomic, strong) ListXinxianshi *xinxianshi;
 
 @end

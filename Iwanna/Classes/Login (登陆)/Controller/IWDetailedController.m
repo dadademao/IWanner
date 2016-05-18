@@ -13,7 +13,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import "IWHobbyController.h"
 
-#define MARGIN 20
+#define MARGIN 32
+#define MARGINW 24
 
 @interface IWDetailedController () <WMCustomDatePickerDelegate, CLLocationManagerDelegate>
 @property (nonatomic, weak) UIButton *selectedBtn;
@@ -29,7 +30,17 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     
+
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpacer.width = -12;
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,leftItem];
+    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage
+                                                                       imageNamed:@"iwanna-icon_small"]];
+    
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18]} forState:UIControlStateNormal];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
@@ -39,15 +50,15 @@
 - (void)addSubViews{
     CGFloat subViewH = 50 * kPP;
     
-    IWLoginCellView *nickname = [[IWLoginCellView alloc] initWithFrame:CGRectMake(0, MARGIN, SCREENW, subViewH) titleName:@"昵称" placeholder:@"请输入昵称" isReference:YES];
+    IWLoginCellView *nickname = [[IWLoginCellView alloc] initWithFrame:CGRectMake(0, MARGINW, SCREENW, subViewH) titleName:@"昵称" placeholder:@"请输入昵称" isReference:YES];
     [self.view addSubview:nickname];
     
     UIView *sexView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(nickname.frame) + MARGIN , SCREENW, subViewH)];
     sexView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:sexView];
     
-    UIView *segmentationView1  = [[UIView alloc] initWithFrame:CGRectMake(SCREENW * 0.5, MARGIN * 0.5, 1, subViewH - MARGIN)];
-    segmentationView1.backgroundColor = YKSubColor;
+    UIView *segmentationView1  = [[UIView alloc] initWithFrame:CGRectMake(SCREENW * 0.5, MARGIN * 0.5, 2, subViewH - MARGIN)];
+    segmentationView1.backgroundColor = UIColorFromHex(0xa5a7bd);
     [sexView addSubview:segmentationView1];
     
     UIButton *manButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREENW * 0.5, subViewH)];
@@ -55,6 +66,7 @@
     [manButton setTitle:@"男" forState:UIControlStateNormal];
     [manButton setTitleColor:YKSubColor forState:UIControlStateNormal];
     [manButton addTarget:self action:@selector(sexBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    manButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
     [sexView addSubview:manButton];
     
     UIButton *womanButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREENW * 0.5 + 1, 0, SCREENW * 0.5, subViewH)];
@@ -62,6 +74,7 @@
     [womanButton setTitle:@"女" forState:UIControlStateNormal];
     [womanButton setTitleColor:YKSubColor forState:UIControlStateNormal];
     [womanButton addTarget:self action:@selector(sexBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    womanButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
     [sexView addSubview:womanButton];
     
     WMCustomDatePicker *datePicker =[[WMCustomDatePicker alloc]initWithframe:CGRectMake(30 * kPP, CGRectGetMaxY(sexView.frame), SCREENW, 3 * subViewH) Delegate:self PickerStyle:WMDateStyle_YearMonthDay];
@@ -75,8 +88,9 @@
     UILabel *birthdayLabel = [[UILabel alloc] init];
     birthdayLabel.text = @"生日";
     [birthdayLabel sizeToFit];
-    birthdayLabel.textColor = YKSubColor;
-    birthdayLabel.x = MARGIN * 0.5;
+    birthdayLabel.textColor = UIColorFromHex(0xa5a7bd);
+    birthdayLabel.font = [UIFont boldSystemFontOfSize:16];
+    birthdayLabel.x = MARGINW;
     birthdayLabel.centerY = CGRectGetMaxY(datePicker.frame) - datePicker.height * 0.5;
     [self.view addSubview:birthdayLabel];
     
@@ -85,8 +99,8 @@
     for (int i = 0; i < 3; i ++) {
         UIView *segmentationView  = [[UIView alloc] init];
         //WithFrame:CGRectMake(SVX * (i + 1), MARGIN * 0.5, 1, subViewH - MARGIN)];
-        segmentationView.backgroundColor = YKSubColor;
-        segmentationView.size = CGSizeMake(1, subViewH - MARGIN * 1.5);
+        segmentationView.backgroundColor = UIColorFromHex(0xa5a7bd);
+        segmentationView.size = CGSizeMake(2, subViewH - MARGIN * 1.5);
         segmentationView.x = SVX * i + CGRectGetMaxX(birthdayLabel.frame) + MARGIN;
         segmentationView.centerY = CGRectGetMaxY(datePicker.frame) - datePicker.height * 0.5;
         [self.view addSubview:segmentationView];
@@ -100,21 +114,25 @@
     
     UILabel *locationLabel = [[UILabel alloc] init];
     locationLabel.text = @"所在城市";
-    locationLabel.textColor = YKSubColor;
+    locationLabel.textColor = UIColorFromHex(0xa5a7bd);
+    locationLabel.font = [UIFont boldSystemFontOfSize:16];
     [locationLabel sizeToFit];
-    locationLabel.x = MARGIN * 0.5;
+    locationLabel.x = MARGINW;
     locationLabel.centerY = locationView.height * 0.5;
     [locationView addSubview:locationLabel];
     
-    UIView *segmentationView2  = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(locationLabel.frame) + MARGIN * 0.5, MARGIN * 0.5, 1, subViewH - MARGIN)];
-    segmentationView2.backgroundColor = YKSubColor;
+    UIView *segmentationView2  = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(locationLabel.frame) + MARGIN * 0.5, MARGIN * 0.5, 2, subViewH - MARGIN)];
+    segmentationView2.backgroundColor = UIColorFromHex(0xa5a7bd);
     [locationView addSubview:segmentationView2];
     
     UIButton *locationBtn = [[UIButton alloc] init];
-    locationBtn.backgroundColor = YKMainColor;
+    
     [locationBtn addTarget:self action:@selector(locationBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [locationBtn setTitle:@"点我" forState:UIControlStateNormal];
+//    [locationBtn setTitle:@"点我" forState:UIControlStateNormal];
+    [locationBtn sizeToFit];
+    [locationBtn setImage:[UIImage imageNamed:@"location-icon_完善资料页面"] forState:UIControlStateNormal];
     locationBtn.size = CGSizeMake(subViewH, subViewH);
+    
     locationBtn.x = SCREENW - subViewH;
     [locationView addSubview:locationBtn];
     
@@ -196,6 +214,11 @@
     self.selectedBtn.selected = NO;
     self.selectedBtn = button;
     self.selectedBtn.selected = YES;
+}
+
+- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
+    NSLog(@"123");
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)rightBarButtonItemClick:(UIBarButtonItem *)item{
