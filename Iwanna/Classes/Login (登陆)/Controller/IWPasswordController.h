@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface IWPasswordController : IWBaseViewController
-
+@property (strong, nonatomic) NSString *phone;
 @end

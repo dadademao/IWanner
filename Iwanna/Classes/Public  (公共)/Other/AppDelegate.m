@@ -10,7 +10,7 @@
 #import "IWTabBarController.h"
 #import "IWLoginController.h"
 #import "UserProvider.h"
-#import "DescoverProvider.h"
+#import "IWHobbyController.h"
 @interface AppDelegate ()
 
 @end
@@ -24,25 +24,16 @@
     // 统一设置状态栏外观
     application.statusBarStyle = UIStatusBarStyleLightContent;
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    if (0) {
-        self.window.rootViewController = [[IWLoginController alloc] init];
+    if (1) {
+        
+        self.window.rootViewController =  [[UINavigationController alloc] initWithRootViewController:[[IWHobbyController alloc] init]];
     }else{
         self.window.rootViewController = [[IWTabBarController alloc] init];
     }
     // 设置环信
 //    [[EaseMob sharedInstance] registerSDKWithAppKey:@"yikai#yikaidemo" apnsCertName:nil];
 //    [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    NSDictionary *dic = @{@"token":@"79ddddfbc3a8479e98cc5228e6823772_20160510113329",@"u_ids":@"64016e0f00bb4d709f1f1772e91bb5cb",@"start_rows":@"0",@"end_rows":@"10",@"type":@"1"};
-//    [DescoverProvider getDescoverHomeViewWithDic:dic Complete:^(HttpResultModel *result) {
-//        
-//    } error:^(NSError *error) {
-//        
-//    }];
-//    [DescoverProvider getNewestListWithDic:dic complete:^(HttpResultModel *result) {
-//        
-//    } error:^(NSError *error) {
-//        
-//    }];
+
     
     [self.window makeKeyAndVisible];
     

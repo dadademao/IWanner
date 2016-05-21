@@ -29,6 +29,8 @@
         if ([responseDict[@"code"] longValue] == 1) {
             UserInfoModel *model = [UserInfoModel modelObjectWithDictionary:responseDict[@"data"][0]];
             HttpResultModel *result = [HttpResultModel getSuccessInstance:model];
+            UserInfoModel *myUserInfo = [UserInfoModel shareUserModel];
+            [myUserInfo  setContentWithDic:responseDict[@"data"][0]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 compelteBlock(result);
                 
@@ -67,7 +69,8 @@
     return [[NetWorkHelper shareManager] postRequest:header body:dic serverAPIURL:url completeBlock:^(NSDictionary *responseDict, NSDictionary *responseHeader) {
         if ([responseDict[@"code"] longValue] == 1) {
             UserInfoModel *model = [UserInfoModel modelObjectWithDictionary:responseDict[@"data"][0]];
-
+            UserInfoModel *myUserInfo = [UserInfoModel shareUserModel];
+            [myUserInfo  setContentWithDic:responseDict[@"data"][0]];
             HttpResultModel *result = [HttpResultModel getSuccessInstance:model];
             dispatch_async(dispatch_get_main_queue(), ^{
                 completeBlock(result);

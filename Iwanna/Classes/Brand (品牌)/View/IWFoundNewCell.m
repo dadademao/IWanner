@@ -7,7 +7,6 @@
 //
 
 #import "IWFoundNewCell.h"
-#import "IWFoundNewModel.h"
 
 @interface IWFoundNewCell ()
 
@@ -76,10 +75,10 @@
 
 - (void)setModel:(IWFoundNewModel *)model{
     _model = model;
-    [self.image sd_setImageWithURL:[NSURL URLWithString:model.imageName] placeholderImage:[UIImage imageNamed:@"textImage"]];
-    self.titleLabel.text = model.title;
-    self.timeLabel.text = model.time;
-    self.contentLabel.text = model.content;
+//    [self.image sd_setImageWithURL:[NSURL URLWithString:model.imageName] placeholderImage:[UIImage imageNamed:@"textImage"]];
+//    self.titleLabel.text = model.title;
+//    self.timeLabel.text = model.time;
+//    self.contentLabel.text = model.content;
 }
 
 @end

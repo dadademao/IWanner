@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,8 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IWOldUserLoginController">
             <connections>
-                <outlet property="passWordTF" destination="CLx-HB-fXe" id="8a6-aN-dTU"/>
-                <outlet property="userNameTF" destination="gCh-gh-p7Z" id="SJg-8m-OYQ"/>
+                <outlet property="acountTextfield" destination="gCh-gh-p7Z" id="Ia4-wI-nFa"/>
+                <outlet property="forgotPasswordBtn" destination="iWX-N6-vc6" id="nn6-Fq-YWY"/>
+                <outlet property="loginBtn" destination="A8z-Kx-DkY" id="W4k-lV-dmF"/>
+                <outlet property="passwordTextfield" destination="CLx-HB-fXe" id="QZc-AX-pci"/>
+                <outlet property="rememberPasswordBtn" destination="uak-eJ-lPA" id="QqF-SL-cUR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="l3d-1T-ifx"/>
             </connections>
         </placeholder>
@@ -29,20 +32,13 @@
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
-                                <action selector="loginBtnClick:" destination="-1" eventType="touchUpInside" id="UZd-2Z-8Hb"/>
+                                <action selector="loginBtnClick:" destination="-1" eventType="touchUpInside" id="bf5-J4-VRO"/>
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc8-XU-pWb">
                             <rect key="frame" x="23" y="112" width="160" height="32"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="记住密码">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWX-N6-vc6">
-                            <rect key="frame" x="183" y="112" width="159.5" height="32"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <state key="normal" title="忘记密码？">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
@@ -107,7 +103,7 @@
                             </variation>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uak-eJ-lPA" customClass="APRoundedButton">
-                            <rect key="frame" x="45" y="118" width="20" height="20"/>
+                            <rect key="frame" x="41" y="118" width="20" height="20"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="aCg-k8-C6E"/>
@@ -118,6 +114,13 @@
                                     <integer key="value" value="9"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWX-N6-vc6">
+                            <rect key="frame" x="183" y="112" width="159.5" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="忘记密码？">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -130,7 +133,7 @@
                         <constraint firstItem="xzU-m6-mjW" firstAttribute="leading" secondItem="CGw-PJ-hKV" secondAttribute="leading" id="DsW-in-iWN"/>
                         <constraint firstItem="gCh-gh-p7Z" firstAttribute="leading" secondItem="xzU-m6-mjW" secondAttribute="trailing" constant="20" id="E9Q-uN-AtA"/>
                         <constraint firstAttribute="trailing" secondItem="P02-u5-mIQ" secondAttribute="trailing" id="Et0-pw-e7F"/>
-                        <constraint firstItem="uak-eJ-lPA" firstAttribute="leading" secondItem="CGw-PJ-hKV" secondAttribute="leading" constant="45" id="EuS-bo-y04"/>
+                        <constraint firstItem="uak-eJ-lPA" firstAttribute="leading" secondItem="CGw-PJ-hKV" secondAttribute="leading" constant="41" id="EuS-bo-y04"/>
                         <constraint firstItem="Rc8-XU-pWb" firstAttribute="leading" secondItem="CGw-PJ-hKV" secondAttribute="leading" constant="23.5" id="IUk-E4-JCw"/>
                         <constraint firstAttribute="trailing" secondItem="gCh-gh-p7Z" secondAttribute="trailing" id="O4c-JK-pDl"/>
                         <constraint firstItem="CLx-HB-fXe" firstAttribute="leading" secondItem="PfE-dl-BRg" secondAttribute="trailing" constant="20" id="SGq-Bb-uYB"/>

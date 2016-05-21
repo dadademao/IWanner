@@ -38,6 +38,7 @@ NSString *const kUserInfoModelQq = @"qq";
 NSString *const kUserInfoModelIsoDeviceId = @"iso_device_id";
 NSString *const kUserInfoModelContent = @"content";
 
+static UserInfoModel *myUserModel;
 
 @interface UserInfoModel ()
 
@@ -77,6 +78,48 @@ NSString *const kUserInfoModelContent = @"content";
 @synthesize isoDeviceId = _isoDeviceId;
 @synthesize content = _content;
 
++ (UserInfoModel *)shareUserModel {
+    static dispatch_once_t t;
+    dispatch_once(&t, ^{
+        myUserModel = [[UserInfoModel alloc] init];
+    });
+    return myUserModel;
+}
+
+- (void) setContentWithDic:(NSDictionary *)dict {
+    if([dict isKindOfClass:[NSDictionary class]]) {
+        self.androidDeviceId = [self objectOrNilForKey:kUserInfoModelAndroidDeviceId fromDictionary:dict];
+        self.introduce = [self objectOrNilForKey:kUserInfoModelIntroduce fromDictionary:dict];
+        self.birthday = [self objectOrNilForKey:kUserInfoModelBirthday fromDictionary:dict];
+        self.createby = [self objectOrNilForKey:kUserInfoModelCreateby fromDictionary:dict];
+        self.updateby = [self objectOrNilForKey:kUserInfoModelUpdateby fromDictionary:dict];
+        self.ids = [self objectOrNilForKey:kUserInfoModelIds fromDictionary:dict];
+        self.logoImgPath = [self objectOrNilForKey:kUserInfoModelLogoImgPath fromDictionary:dict];
+        self.updatedate = [self objectOrNilForKey:kUserInfoModelUpdatedate fromDictionary:dict];
+        self.interest = [self objectOrNilForKey:kUserInfoModelInterest fromDictionary:dict];
+        self.keywords = [self objectOrNilForKey:kUserInfoModelKeywords fromDictionary:dict];
+        self.locationY = [self objectOrNilForKey:kUserInfoModelLocationY fromDictionary:dict];
+        self.version = [[self objectOrNilForKey:kUserInfoModelVersion fromDictionary:dict] doubleValue];
+        self.userIds = [self objectOrNilForKey:kUserInfoModelUserIds fromDictionary:dict];
+        self.locationX = [self objectOrNilForKey:kUserInfoModelLocationX fromDictionary:dict];
+        self.delflag = [self objectOrNilForKey:kUserInfoModelDelflag fromDictionary:dict];
+        self.provinceCity = [self objectOrNilForKey:kUserInfoModelProvinceCity fromDictionary:dict];
+        self.name = [self objectOrNilForKey:kUserInfoModelName fromDictionary:dict];
+        self.gender = [[self objectOrNilForKey:kUserInfoModelGender fromDictionary:dict] doubleValue];
+        self.email = [self objectOrNilForKey:kUserInfoModelEmail fromDictionary:dict];
+        self.label = [self objectOrNilForKey:kUserInfoModelLabel fromDictionary:dict];
+        self.serviceLevel = [[self objectOrNilForKey:kUserInfoModelServiceLevel fromDictionary:dict] doubleValue];
+        self.phone = [self objectOrNilForKey:kUserInfoModelPhone fromDictionary:dict];
+        self.wx = [self objectOrNilForKey:kUserInfoModelWx fromDictionary:dict];
+        self.remarks = [self objectOrNilForKey:kUserInfoModelRemarks fromDictionary:dict];
+        self.createdate = [self objectOrNilForKey:kUserInfoModelCreatedate fromDictionary:dict];
+        self.password = [self objectOrNilForKey:kUserInfoModelPassword fromDictionary:dict];
+        self.qq = [self objectOrNilForKey:kUserInfoModelQq fromDictionary:dict];
+        self.isoDeviceId = [self objectOrNilForKey:kUserInfoModelIsoDeviceId fromDictionary:dict];
+        self.content = [self objectOrNilForKey:kUserInfoModelContent fromDictionary:dict];
+        
+    }
+}
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
 {
@@ -286,6 +329,7 @@ NSString *const kUserInfoModelContent = @"content";
     
     return copy;
 }
+
 
 
 @end

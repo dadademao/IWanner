@@ -8,7 +8,6 @@
 
 #import "IWFoundNewController.h"
 #import "IWFoundNewCell.h"
-#import "IWFoundNewModel.h"
 
 @interface IWFoundNewController ()
 <
@@ -82,12 +81,12 @@ UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     IWFoundNewCell *cell = [IWFoundNewCell cellWithTableView:tableView];
-    IWFoundNewModel *newModel = [[IWFoundNewModel alloc] init];
-    newModel.imageName = self.dataArray[indexPath.section][@"image"];
-    newModel.title = self.dataArray[indexPath.section][@"title"];
-    newModel.time = self.dataArray[indexPath.section][@"time"];
-    newModel.content = @"我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.";
-    cell.model = newModel;
+//    IWFoundNewModel *newModel = [[IWFoundNewModel alloc] init];
+//    newModel.imageName = self.dataArray[indexPath.section][@"image"];
+//    newModel.title = self.dataArray[indexPath.section][@"title"];
+//    newModel.time = self.dataArray[indexPath.section][@"time"];
+//    newModel.content = @"我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.我是一只小青蛙, 呱呱呱呱呱.每天快乐的唱歌,啦啦啦啦啦.";
+//    cell.model = newModel;
     return cell;
 }
 

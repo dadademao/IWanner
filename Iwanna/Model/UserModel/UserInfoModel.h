@@ -44,5 +44,7 @@
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 - (NSDictionary *)dictionaryRepresentation;
-
++ (UserInfoModel *)shareUserModel;
+- (void) setContentWithDic:(NSDictionary *)dict;
 @end
+

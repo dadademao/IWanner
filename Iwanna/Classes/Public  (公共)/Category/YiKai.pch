@@ -16,15 +16,18 @@
 #import "MJExtension.h"
 #import "UIImageView+WebCache.h"
 #import "SVProgressHUD.h"
-
+#import "YYKit.h"
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+Extension.h"
+#import "UserInfoModel.h"
+#import "CacheData.h"
 
 #ifdef DEBUG
 #define NSLog(...) NSLog(__VA_ARGS__)
 #else
 #define NSLog(...)
 #endif
+
 
 //使用16位颜色
 #define UIColorFromHex(s) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:1.0]

@@ -8,6 +8,8 @@
 
 #import "IWFoundChildView.h"
 #import "IWFoundChildViewModel.h"
+#import "ListXinxianshi.h"
+#import "ListHuodong.h"
 
 @interface IWFoundChildView ()
 @property (nonatomic, weak) UIImageView *imageView;
@@ -43,15 +45,25 @@
     return self;
 }
 
-- (void)setChildViewModel:(IWFoundChildViewModel *)childViewModel{
-    _childViewModel = childViewModel;
+- (void)setHuodong:(ListHuodong *)huodong{
+    _huodong = huodong;
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:huodong.imageUrl] placeholderImage:[UIImage imageNamed:@"textImage"]];
     
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:childViewModel.imageName] placeholderImage:[UIImage imageNamed:@"textImage"]];
-    
-    self.titleLabel.text = childViewModel.title;
+    self.titleLabel.text = huodong.title;
     [self.titleLabel sizeToFit];
     
-    self.timeLabel.text = childViewModel.time;
+    self.timeLabel.text = huodong.createdate;
+    [self.timeLabel sizeToFit];
+}
+
+- (void)setXinxianshi:(ListXinxianshi *)xinxianshi{
+    xinxianshi = xinxianshi;
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:xinxianshi.imageUrl] placeholderImage:[UIImage imageNamed:@"textImage"]];
+    
+    self.titleLabel.text = xinxianshi.title;
+    [self.titleLabel sizeToFit];
+    
+    self.timeLabel.text = xinxianshi.createdate;
     [self.timeLabel sizeToFit];
 }
 

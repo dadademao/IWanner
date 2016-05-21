@@ -21,6 +21,9 @@
 @property (nonatomic, weak) WMCustomDatePicker *datePicker;
 @property (nonatomic, strong) CLLocationManager *mgr;
 @property (nonatomic, weak) UILabel *locationDetailedLabel;
+@property (weak, nonatomic) IWLoginCellView *nickName;
+@property (copy, nonatomic) NSString *sex;
+@property (copy, nonatomic) NSString *birthday;
 @end
 
 @implementation IWDetailedController
@@ -29,8 +32,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
-    
+    self.sex = @"1";
 
+
+    [self initNav];
+    [self addSubViews];
+}
+
+- (void) initNav {
     UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     negativeSpacer.width = -12;
@@ -38,21 +47,19 @@
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage
                                                                        imageNamed:@"iwanna-icon_small"]];
     
-
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18]} forState:UIControlStateNormal];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
-    
-    [self addSubViews];
 }
 
 - (void)addSubViews{
-    CGFloat subViewH = 50 * kPP;
+    CGFloat subViewH = 100 * kPP;
     
     IWLoginCellView *nickname = [[IWLoginCellView alloc] initWithFrame:CGRectMake(0, MARGINW, SCREENW, subViewH) titleName:@"昵称" placeholder:@"请输入昵称" isReference:YES];
     [self.view addSubview:nickname];
-    
+    self.nickName = nickname;
     UIView *sexView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(nickname.frame) + MARGIN , SCREENW, subViewH)];
     sexView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:sexView];
@@ -67,6 +74,7 @@
     [manButton setTitleColor:YKSubColor forState:UIControlStateNormal];
     [manButton addTarget:self action:@selector(sexBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     manButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+    manButton.tag = 121;
     [sexView addSubview:manButton];
     
     UIButton *womanButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREENW * 0.5 + 1, 0, SCREENW * 0.5, subViewH)];
@@ -75,13 +83,16 @@
     [womanButton setTitleColor:YKSubColor forState:UIControlStateNormal];
     [womanButton addTarget:self action:@selector(sexBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     womanButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+    womanButton.tag = 122;
     [sexView addSubview:womanButton];
     
     WMCustomDatePicker *datePicker =[[WMCustomDatePicker alloc]initWithframe:CGRectMake(30 * kPP, CGRectGetMaxY(sexView.frame), SCREENW, 3 * subViewH) Delegate:self PickerStyle:WMDateStyle_YearMonthDay];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init]; // 初始化时间格式化工具
     formatter.dateFormat = @"yyyy-MM-dd"; // 告诉格式化工具怎么去读取这个时间
     NSDate *createDate = [formatter dateFromString:@"2008-08-08"];
+    self.birthday = @"2008-08-08";
     datePicker.ScrollToDate = createDate;
+    datePicker.delegate = self;
     self.datePicker = datePicker;
     [self.view addSubview:datePicker];
     
@@ -214,20 +225,36 @@
     self.selectedBtn.selected = NO;
     self.selectedBtn = button;
     self.selectedBtn.selected = YES;
+    if (button.tag == 121) {
+        self.sex = @"1";
+    } else {
+        self.sex = @"2";
+    }
 }
 
-- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
-    NSLog(@"123");
+- (void)leftBarButtonItemClick:(UIBarButtonItem *)item {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)rightBarButtonItemClick:(UIBarButtonItem *)item{
-    [self.navigationController pushViewController:[[IWHobbyController alloc] init] animated:YES];
+    if (![self checekUserDetail]) {
+        return;
+    }
+    IWHobbyController *vc = [[IWHobbyController alloc] init];
+    vc.phone    = self.phone;
+    vc.password = self.password;
+    vc.birthDay = self.birthday;
+    vc.sex      = self.sex;
+    vc.location = self.locationDetailedLabel.text;
+    vc.nickName = self.nickName.textField.text;
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 - (void)finishDidSelectDatePicker:(WMCustomDatePicker *)datePicker year:(NSString *)year month:(NSString *)month day:(NSString *)day hour:(NSString *)hour minute:(NSString *)minute weekDay:(NSString *)weekDay{
     
     datePicker.ScrollToDate = [NSDate date];
+    self.birthday = [self dateFromString:datePicker.date withFormat:@"yyyy-MM-dd"];
     NSLog(@"%@====%@=====%@=====%@=====%@=====%@=====",year,month,day,hour,minute,weekDay);
     NSLog(@"%@",[NSString stringWithFormat:@"%@%@%@%@%@%@",year,month,day,hour,minute,weekDay]);
 }
@@ -241,4 +268,14 @@
     return dateStr;
 }
 
+
+- (BOOL) checekUserDetail {
+    
+    if (self.nickName.textField.text.length <= 0) {
+        [SVProgressHUD showErrorWithStatus:@"昵称不能为空"];
+        return NO;
+    }
+    return YES;
+
+}
 @end

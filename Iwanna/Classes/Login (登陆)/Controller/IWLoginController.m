@@ -31,7 +31,7 @@
 
 - (void)addSubViews{
     CGFloat buttonW = SCREENW - 2 * MARGIN;
-    CGFloat buttonH = 50 * kPP;
+    CGFloat buttonH = 100 * kPP;
     CGFloat buttonY = SCREENH * 0.5 + MARGIN;
     
     UIButton *registerBtn = [[UIButton alloc] initWithFrame:CGRectMake(MARGIN, buttonY, buttonW, buttonH)];
@@ -45,6 +45,8 @@
     [self setBtnStateWithButton:loginBtn Title:@"已有账户登陆"];
     [loginBtn addTarget:self action:@selector(loginBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginBtn];
+    
+    
 }
 
 - (void)setBtnStateWithButton:(UIButton *)button Title:(NSString *)btnStr{
@@ -63,7 +65,7 @@
 
 - (void)loginBtnClick:(UIButton *)button{
     NSLog(@"已有账户登陆");
-    IWOldUserLoginController *registerController = [[IWOldUserLoginController alloc] init];
+    IWOldUserLoginController *registerController = [[IWOldUserLoginController alloc] initWithNibName:@"IWOldUserLoginController" bundle:[NSBundle mainBundle]];
     [self presentViewController:registerController animated:YES completion:nil];
 }
 

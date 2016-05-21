@@ -9,50 +9,56 @@
 #import "IWRegisterController.h"
 #import "IWLoginCellView.h"
 #import "IWPasswordController.h"
-
+#import "UserProvider.h"
+#import "VerificationModel.h"
 #define MARGIN 20
 
 @interface IWRegisterController ()
 @property (nonatomic, weak) IWLoginCellView *userName;
+@property (weak, nonatomic) IWLoginCellView *passwordCell;
+@property (strong, nonatomic) VerificationModel *verifyModel;
+
 @end
 
 @implementation IWRegisterController
 
+
+
+#pragma mark -
+#pragma mark - CycLife
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = YKBackColor;
+    
+    [self initNav];
+    
+    [self addSubViews];
+}
 
+- (void) initNav {
+    
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"navigation_back" target:self action:@selector(leftBarButtonItemClick:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"right" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
-
     
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick:)];
-//    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
     UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImageName:@"back-icon" target:self action:@selector(leftBarButtonItemClick:)];
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     negativeSpacer.width = -12;
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,leftItem];
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage
                                                                        imageNamed:@"iwanna-icon_small"]];
-
+    
     
     UIBarButtonItem *rightItem = [UIBarButtonItem itemWithImageName:@"next-icon" target:self action:@selector(rightBarButtonItemClick:)];
-//    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-//    negativeSpacer.width = -12;
-    self.navigationItem.rightBarButtonItems = @[negativeSpacer,rightItem];
     
-                                             
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"right" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick:)];
-//    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
-//    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
-
-    [self addSubViews];
+    self.navigationItem.rightBarButtonItems = @[negativeSpacer,rightItem];
 }
 
 - (void)addSubViews{
-    CGFloat subViewH = 50 * kPP;
+    self.view.backgroundColor = YKBackColor;
+    
+    CGFloat subViewH = 100 * kPP;
     
     IWLoginCellView *userName = [[IWLoginCellView alloc] initWithFrame:CGRectMake(0, MARGIN, SCREENW, subViewH) titleName:@"中国(+86)" placeholder:@"请输入手机号" isReference:NO];
     self.userName = userName;
@@ -60,8 +66,10 @@
     [self.view addSubview:userName];
     
     IWLoginCellView *password = [[IWLoginCellView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(userName.frame) + MARGIN, SCREENW, subViewH) titleName:@"验证码" placeholder:@"请输入验证码" isReference:NO];
+    password.textField.keyboardType = UIKeyboardTypeNumberPad;
+
     [self.view addSubview:password];
-    
+    self.passwordCell = password;
     CGFloat buttonW = 80;
     UIButton *sendBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREENW - buttonW, 0, buttonW, subViewH)];
     sendBtn.titleLabel.font = SYS_FONT(16);
@@ -72,37 +80,8 @@
     [userName addSubview:sendBtn];
 }
 
-- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
-    NSLog(@"123");
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
-- (void)rightBarButtonItemClick:(UIBarButtonItem *)item{
-    
-//    // 注册环信
-//    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:self.userName.textField.text password:@"123456" withCompletion:^(NSString *username, NSString *password, EMError *error) {
-//        if (!error) {
-//            NSLog(@"注册成功");
-//            // 如果没有开启自动登录
-//            BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
-//            if (!isAutoLogin) {
-//                // 登录环信
-//                [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:username password:password completion:^(NSDictionary *loginInfo, EMError *error) {
-//                    if (!error) {
-//                        NSLog(@"登录成功");
-//                    }
-//                } onQueue:nil];
-//            }
-//        }
-//    } onQueue:nil];
-    
-    [self.navigationController pushViewController:[[IWPasswordController alloc] init] animated:YES];
-}
 
-- (void)sendBtnClick:(UIButton *)button{
-    NSLog(@"发送验证码");
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -112,14 +91,105 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark -
+#pragma mark - Settings, Gettings
+
+#pragma mark -
+#pragma mark - Events
+
+- (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
+    NSLog(@"123");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+
+- (void)rightBarButtonItemClick:(UIBarButtonItem *)item{
+    
+    //    // 注册环信
+    //    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:self.userName.textField.text password:@"123456" withCompletion:^(NSString *username, NSString *password, EMError *error) {
+    //        if (!error) {
+    //            NSLog(@"注册成功");
+    //            // 如果没有开启自动登录
+    //            BOOL isAutoLogin = [[EaseMob sharedInstance].chatManager isAutoLoginEnabled];
+    //            if (!isAutoLogin) {
+    //                // 登录环信
+    //                [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:username password:password completion:^(NSDictionary *loginInfo, EMError *error) {
+    //                    if (!error) {
+    //                        NSLog(@"登录成功");
+    //                    }
+    //                } onQueue:nil];
+    //            }
+    //        }
+    //    } onQueue:nil];
+    
+    if (![self checkingVerify]) {
+        [SVProgressHUD showErrorWithStatus:@"验证码与手机号不匹配"];
+        return;
+    }
+    
+    IWPasswordController *passwordVC = [[IWPasswordController alloc] init];
+    passwordVC.phone = self.verifyModel.phone;
+    [self.navigationController pushViewController:passwordVC animated:YES];
+}
+
+
+- (void)sendBtnClick:(UIButton *)button{
+    
+    if (![self checkingPhone]) {
+        return;
+    }
+    @weakify(self);
+    [SVProgressHUD show];
+    [UserProvider getVerificationWithPhoneNum:self.userName.textField.text complete:^(HttpResultModel *result) {
+        if (result.isComplete) {
+            weak_self.verifyModel = result.data;
+            NSLog(@"verify = %@",weak_self.verifyModel.smsMessage);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+            });
+        } else {
+            [SVProgressHUD showErrorWithStatus:result.message];
+        }
+        
+    } error:^(NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD showErrorWithStatus:error.domain];
+        });
+    }];
+    
+    NSLog(@"发送验证码");
+    
+}
+
+
+#pragma mark -
+#pragma mark - Methods
+//验证手机号
+- (BOOL) checkingPhone {
+    
+    if (self.userName.textField.text.length <= 0) {
+        [[[UIAlertView alloc] initWithTitle:@"号码错误" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+        return NO;
+    }
+    
+    return YES;
+
+}
+//验证验证码与手机号是否匹配
+- (BOOL) checkingVerify {
+    if ([self.userName.textField.text isEqualToString:self.verifyModel.phone] && [self.passwordCell.textField.text isEqualToString:self.verifyModel.smsMessage]) {
+        return YES;
+    } else return NO;
+}
+
+#pragma mark -
+#pragma mark - <#Delegate#>
+
+#pragma mark -
+#pragma mark - NSNotification
+
+#pragma mark -
+#pragma mark - KVO/KVC
+
 
 @end

@@ -9,7 +9,7 @@
 #import "IWHobbyController.h"
 #import "IWHobbyCell.h"
 #import "IWTabBarController.h"
-
+#import "UserProvider.h"
 @interface IWHobbyController ()
 @property (nonatomic, strong) NSArray *hobbys;
 @end
@@ -136,8 +136,45 @@
 }
 
 - (void)rightBarButtonItemClick:(UIBarButtonItem *)item{
-    [self presentViewController:[[IWTabBarController alloc] init] animated:YES completion:nil];
-//    [UIApplication sharedApplication].keyWindow.rootViewController = [[IWTabBarController alloc] init];
+    [self regist];
 }
+
+
+#pragma mark -
+#pragma mark - httpRequest
+
+- (void) regist {
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+//    [dic setValue:self.phone forKey:@"phone"];
+//    [dic setValue:self.nickName forKey:@"name"];
+//    [dic setValue:self.location forKey:@"province_city"];
+//    [dic setValue:self.birthDay forKey:@"birthDat"];
+//    [dic setValue:self.password forKey:@"password"];
+//    [dic setValue:self.sex forKey:@"gender"];
+    [dic setValue:@"13049492421" forKey:@"phone"];
+    [dic setValue:@"2323" forKey:@"name"];
+    [dic setValue:@"gfff" forKey:@"province_city"];
+    [dic setValue:@"2009-02-03" forKey:@"birthDat"];
+    [dic setValue:@"wwwwwww" forKey:@"password"];
+    [dic setValue:@"1" forKey:@"gender"];
+    @weakify(self);
+    [UserProvider registWithDic:dic complete:^(HttpResultModel *result) {
+        if (result.isComplete) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weak_self presentViewController:[[IWTabBarController alloc] init] animated:YES completion:nil];
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD showErrorWithStatus:result.message];
+            });
+        }
+    } error:^(NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD showErrorWithStatus:error.description];
+        });
+    }];
+}
+
 
 @end

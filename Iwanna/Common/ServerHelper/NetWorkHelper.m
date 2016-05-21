@@ -131,4 +131,18 @@
     return  dataTask;
     
 }
+
+/**
+ *  开始网络请求的状态
+ */
++ (void)startNetworkActivity {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+/**
+ *  关闭网络请求的状态
+ */
++ (void)stopNetworkActivity {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
 @end
