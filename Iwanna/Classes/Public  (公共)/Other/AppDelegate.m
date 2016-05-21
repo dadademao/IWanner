@@ -10,7 +10,6 @@
 #import "IWTabBarController.h"
 #import "IWLoginController.h"
 #import "UserProvider.h"
-#import "IWHobbyController.h"
 @interface AppDelegate ()
 
 @end
@@ -25,8 +24,7 @@
     application.statusBarStyle = UIStatusBarStyleLightContent;
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     if (1) {
-        
-        self.window.rootViewController =  [[UINavigationController alloc] initWithRootViewController:[[IWHobbyController alloc] init]];
+        self.window.rootViewController = [[IWLoginController alloc] init];
     }else{
         self.window.rootViewController = [[IWTabBarController alloc] init];
     }

@@ -129,6 +129,10 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 #pragma mark <UICollectionViewDelegate>
 
 - (void)leftBarButtonItemClick:(UIBarButtonItem *)item{
@@ -146,18 +150,13 @@
 - (void) regist {
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-//    [dic setValue:self.phone forKey:@"phone"];
-//    [dic setValue:self.nickName forKey:@"name"];
-//    [dic setValue:self.location forKey:@"province_city"];
-//    [dic setValue:self.birthDay forKey:@"birthDat"];
-//    [dic setValue:self.password forKey:@"password"];
-//    [dic setValue:self.sex forKey:@"gender"];
-    [dic setValue:@"13049492421" forKey:@"phone"];
-    [dic setValue:@"2323" forKey:@"name"];
-    [dic setValue:@"gfff" forKey:@"province_city"];
-    [dic setValue:@"2009-02-03" forKey:@"birthDat"];
-    [dic setValue:@"wwwwwww" forKey:@"password"];
-    [dic setValue:@"1" forKey:@"gender"];
+    [dic setValue:self.phone forKey:@"phone"];
+    [dic setValue:self.nickName forKey:@"name"];
+    [dic setValue:self.location forKey:@"province_city"];
+    [dic setValue:self.birthDay forKey:@"birthDat"];
+    [dic setValue:[self.password md5String] forKey:@"password"];
+    [dic setValue:self.sex forKey:@"gender"];
+
     @weakify(self);
     [UserProvider registWithDic:dic complete:^(HttpResultModel *result) {
         if (result.isComplete) {
