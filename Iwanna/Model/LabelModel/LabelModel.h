@@ -12,13 +12,13 @@
 @interface LabelModel : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSString *labelName;
-@property (nonatomic, assign) id updatedate;
-@property (nonatomic, assign) id remarks;
+@property (nonatomic, strong) NSString *updatedate;
+@property (nonatomic, strong) NSString *remarks;
 @property (nonatomic, assign) double weight;
 @property (nonatomic, strong) NSString *createby;
-@property (nonatomic, assign) double seqNo;
+@property (nonatomic, assign) int seqNo;
 @property (nonatomic, strong) NSString *ids;
-@property (nonatomic, assign) id updateby;
+@property (nonatomic, strong) NSString *updateby;
 @property (nonatomic, strong) NSString *createdate;
 @property (nonatomic, assign) double version;
 @property (nonatomic, strong) NSString *delflag;

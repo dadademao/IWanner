@@ -225,6 +225,9 @@
 		F79317371CE1986500309155 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F79317341CE1986500309155 /* UserInfoModel.m */; };
 		F79317381CE1986500309155 /* VerificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F79317361CE1986500309155 /* VerificationModel.m */; };
 		F793173C1CE19CF600309155 /* LabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F793173B1CE19CF600309155 /* LabelModel.m */; };
+		F7A3E60F1CF15776002B9D0A /* ProductProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A3E60E1CF15776002B9D0A /* ProductProvider.m */; };
+		F7B255271CF1624D00854EEB /* ProductListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B255241CF1624D00854EEB /* ProductListModel.m */; };
+		F7B255281CF1624D00854EEB /* ProductTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B255261CF1624D00854EEB /* ProductTypeModel.m */; };
 		F7BE7A061CE42281007C65CD /* DescoverHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7A011CE42280007C65CD /* DescoverHomeModel.m */; };
 		F7BE7A071CE42281007C65CD /* ListHuodong.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7A031CE42280007C65CD /* ListHuodong.m */; };
 		F7BE7A081CE42281007C65CD /* ListXinxianshi.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7A051CE42281007C65CD /* ListXinxianshi.m */; };
@@ -650,6 +653,12 @@
 		F79317361CE1986500309155 /* VerificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationModel.m; sourceTree = "<group>"; };
 		F793173A1CE19CF600309155 /* LabelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelModel.h; sourceTree = "<group>"; };
 		F793173B1CE19CF600309155 /* LabelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelModel.m; sourceTree = "<group>"; };
+		F7A3E60D1CF15776002B9D0A /* ProductProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductProvider.h; sourceTree = "<group>"; };
+		F7A3E60E1CF15776002B9D0A /* ProductProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductProvider.m; sourceTree = "<group>"; };
+		F7B255231CF1624D00854EEB /* ProductListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListModel.h; sourceTree = "<group>"; };
+		F7B255241CF1624D00854EEB /* ProductListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListModel.m; sourceTree = "<group>"; };
+		F7B255251CF1624D00854EEB /* ProductTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTypeModel.h; sourceTree = "<group>"; };
+		F7B255261CF1624D00854EEB /* ProductTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTypeModel.m; sourceTree = "<group>"; };
 		F7BE7A001CE42280007C65CD /* DescoverHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescoverHomeModel.h; sourceTree = "<group>"; };
 		F7BE7A011CE42280007C65CD /* DescoverHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescoverHomeModel.m; sourceTree = "<group>"; };
 		F7BE7A021CE42280007C65CD /* ListHuodong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListHuodong.h; sourceTree = "<group>"; };
@@ -1605,6 +1614,7 @@
 		F793172B1CE17A1E00309155 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7B255221CF1624D00854EEB /* Product */,
 				F7BE79FF1CE42280007C65CD /* DescoverHomeModel */,
 				F79317391CE19CF600309155 /* LabelModel */,
 				F79317321CE1986500309155 /* UserModel */,
@@ -1634,9 +1644,30 @@
 			path = LabelModel;
 			sourceTree = "<group>";
 		};
+		F7A3E60C1CF1571B002B9D0A /* ProductProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F7A3E60D1CF15776002B9D0A /* ProductProvider.h */,
+				F7A3E60E1CF15776002B9D0A /* ProductProvider.m */,
+			);
+			path = ProductProvider;
+			sourceTree = "<group>";
+		};
+		F7B255221CF1624D00854EEB /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				F7B255231CF1624D00854EEB /* ProductListModel.h */,
+				F7B255241CF1624D00854EEB /* ProductListModel.m */,
+				F7B255251CF1624D00854EEB /* ProductTypeModel.h */,
+				F7B255261CF1624D00854EEB /* ProductTypeModel.m */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		F7BC12D41CD0A94B002657C2 /* Bussiness */ = {
 			isa = PBXGroup;
 			children = (
+				F7A3E60C1CF1571B002B9D0A /* ProductProvider */,
 				F7BE7A091CE422A4007C65CD /* DiscoverProvider */,
 				F79317201CE1779000309155 /* UserProvider */,
 				F79317211CE177C100309155 /* BaseProvider.h */,
@@ -1764,6 +1795,7 @@
 				F7774E8D1CEC688300C134BA /* YYLabel.m in Sources */,
 				1866156C1C2F9505007B7450 /* IWPasswordController.m in Sources */,
 				B1768A561CD1148B00829146 /* UIImageView+HighlightedWebCache.m in Sources */,
+				F7A3E60F1CF15776002B9D0A /* ProductProvider.m in Sources */,
 				C9144EB91CD7AD24000682F1 /* OJMeInfoGroup.m in Sources */,
 				B195531E1CEAF7C600CDA582 /* IWFoundHuodong.m in Sources */,
 				F7774E521CEC688300C134BA /* NSObject+YYAdd.m in Sources */,
@@ -1818,6 +1850,7 @@
 				F7774E691CEC688300C134BA /* YYDiskCache.m in Sources */,
 				1866156F1C2F9835007B7450 /* IWDetailedController.m in Sources */,
 				F7774E751CEC688300C134BA /* YYImageCoder.m in Sources */,
+				F7B255271CF1624D00854EEB /* ProductListModel.m in Sources */,
 				F7774E811CEC688300C134BA /* YYTextLine.m in Sources */,
 				B17689FB1CD1145500829146 /* AFImageDownloader.m in Sources */,
 				B1768A581CD1148B00829146 /* UIView+WebCacheOperation.m in Sources */,
@@ -1856,6 +1889,7 @@
 				F7774E7E1CEC688300C134BA /* YYTextInput.m in Sources */,
 				B1CEB7D41C6B55AD00521AC0 /* IWOldUserLoginController.m in Sources */,
 				F7774E6E1CEC688300C134BA /* MKAnnotationView+YYWebImage.m in Sources */,
+				F7B255281CF1624D00854EEB /* ProductTypeModel.m in Sources */,
 				B1F4EECF1CD3DC8400F2C148 /* IWCalendarSelectedView.m in Sources */,
 				186615511C2EDB38007B7450 /* UIView+Extension.m in Sources */,
 				B17689F51CD1145500829146 /* AFURLRequestSerialization.m in Sources */,

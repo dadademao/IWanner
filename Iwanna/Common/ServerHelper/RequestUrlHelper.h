@@ -52,7 +52,12 @@ typedef NS_ENUM(NSUInteger, RequestUrlTag) {
     /**
      *  获取产品类型列表
      */
-    kBussinessGetProductTypeList = 1008
+    kBussinessGetProductTypeList = 1008,
+    
+    /**
+     *  获取产品列表
+     */
+    kBussunessGetProductList = 1009
     
 };
 

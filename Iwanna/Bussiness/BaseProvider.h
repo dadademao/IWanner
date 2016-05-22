@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "NetWorkHelper.h"
 #import "HttpResultModel.h"
+#import "RequestUrlHelper.h"
+
 typedef void (^Complete)(HttpResultModel *result);
 
 @interface BaseProvider : NSObject

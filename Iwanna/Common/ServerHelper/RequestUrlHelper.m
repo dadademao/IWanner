@@ -41,7 +41,10 @@
 #define GET_NEWEST @"get_new_list"
 
 //获取产品类型
-#define GET_PRODUCT_LIST @"get_product_type_list"
+#define GET_PRODUCT_TYPE_LIST @"get_product_type_list"
+
+//获取产品列表
+#define GET_PRODUCT_LIST @"get_productlist_type"
 
 #import "RequestUrlHelper.h"
 
@@ -74,8 +77,10 @@
             return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_NEWEST];
             break;
         case kBussinessGetProductTypeList:
-            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_PRODUCT_LIST];
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_PRODUCT_TYPE_LIST];
             break;
+        case kBussunessGetProductList:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_PRODUCT_LIST];
         default:
             return @"";
             break;

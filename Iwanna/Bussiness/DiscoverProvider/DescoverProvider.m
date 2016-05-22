@@ -7,7 +7,6 @@
 //
 
 #import "DescoverProvider.h"
-#import "RequestUrlHelper.h"
 #import "DescoverHomeModel.h"
 #import "BaseNewestModel.h"
 @implementation DescoverProvider

@@ -7,7 +7,6 @@
 //
 
 #import "UserProvider.h"
-#import "RequestUrlHelper.h"
 #import "UserInfoModel.h"
 #import "VerificationModel.h"
 #import "LabelModel.h"
