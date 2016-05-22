@@ -46,6 +46,9 @@
 //获取产品列表
 #define GET_PRODUCT_LIST @"get_productlist_type"
 
+//获取商户列表
+#define GET_BRAND_LIST @"get_brand_list_product_type"
+
 #import "RequestUrlHelper.h"
 
 @implementation RequestUrlHelper
@@ -81,6 +84,10 @@
             break;
         case kBussunessGetProductList:
             return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_PRODUCT_LIST];
+            break;
+        case kBussinessGetBrandList:
+            return [NSString stringWithFormat:@"%@%@",IP_AND_PORT,GET_BRAND_LIST];
+            break;
         default:
             return @"";
             break;

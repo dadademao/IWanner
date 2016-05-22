@@ -228,6 +228,7 @@
 		F7A3E60F1CF15776002B9D0A /* ProductProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A3E60E1CF15776002B9D0A /* ProductProvider.m */; };
 		F7B255271CF1624D00854EEB /* ProductListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B255241CF1624D00854EEB /* ProductListModel.m */; };
 		F7B255281CF1624D00854EEB /* ProductTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B255261CF1624D00854EEB /* ProductTypeModel.m */; };
+		F7B2552B1CF16BB300854EEB /* BrandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B2552A1CF16BB300854EEB /* BrandModel.m */; };
 		F7BE7A061CE42281007C65CD /* DescoverHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7A011CE42280007C65CD /* DescoverHomeModel.m */; };
 		F7BE7A071CE42281007C65CD /* ListHuodong.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7A031CE42280007C65CD /* ListHuodong.m */; };
 		F7BE7A081CE42281007C65CD /* ListXinxianshi.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7A051CE42281007C65CD /* ListXinxianshi.m */; };
@@ -659,6 +660,8 @@
 		F7B255241CF1624D00854EEB /* ProductListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListModel.m; sourceTree = "<group>"; };
 		F7B255251CF1624D00854EEB /* ProductTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTypeModel.h; sourceTree = "<group>"; };
 		F7B255261CF1624D00854EEB /* ProductTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTypeModel.m; sourceTree = "<group>"; };
+		F7B255291CF16BB300854EEB /* BrandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandModel.h; sourceTree = "<group>"; };
+		F7B2552A1CF16BB300854EEB /* BrandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandModel.m; sourceTree = "<group>"; };
 		F7BE7A001CE42280007C65CD /* DescoverHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescoverHomeModel.h; sourceTree = "<group>"; };
 		F7BE7A011CE42280007C65CD /* DescoverHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescoverHomeModel.m; sourceTree = "<group>"; };
 		F7BE7A021CE42280007C65CD /* ListHuodong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListHuodong.h; sourceTree = "<group>"; };
@@ -1656,6 +1659,8 @@
 		F7B255221CF1624D00854EEB /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				F7B255291CF16BB300854EEB /* BrandModel.h */,
+				F7B2552A1CF16BB300854EEB /* BrandModel.m */,
 				F7B255231CF1624D00854EEB /* ProductListModel.h */,
 				F7B255241CF1624D00854EEB /* ProductListModel.m */,
 				F7B255251CF1624D00854EEB /* ProductTypeModel.h */,
@@ -1954,6 +1959,7 @@
 				B1253FB91CD1D44100ABD240 /* IWFoundToolView.m in Sources */,
 				B13547A81C6AE60C00FCC6D4 /* AppDelegate.m in Sources */,
 				186615691C2F00AC007B7450 /* IWLoginCellView.m in Sources */,
+				F7B2552B1CF16BB300854EEB /* BrandModel.m in Sources */,
 				F7774E5C1CEC688300C134BA /* UIBezierPath+YYAdd.m in Sources */,
 				B17689F91CD1145500829146 /* README.md in Sources */,
 				B1768A261CD1147D00829146 /* SVRadialGradientLayer.m in Sources */,
